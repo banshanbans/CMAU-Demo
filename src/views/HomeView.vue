@@ -5,7 +5,7 @@
     <main class="pt-24 pb-20 px-6 max-w-6xl mx-auto">
       <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-16 mb-10">
         <div class="lg:col-span-7">
-          <p class="text-xs font-bold tracking-widest text-secondary uppercase mb-4">Research Scholar Platform</p>
+          <p class="text-xs font-bold tracking-widest text-primary uppercase mb-4">Research Scholar Platform</p>
           <h1 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-primary leading-tight mb-5">
             用数据化诊断，帮你把科研准备变成一条可执行的升学路径。
           </h1>
@@ -15,7 +15,7 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <router-link to="/assessment"
-              class="inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all shadow-lg shadow-secondary/20">
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20">
               <span class="material-symbols-outlined text-[20px]">bolt</span>
               免费开始测评
             </router-link>
@@ -30,14 +30,14 @@
         <div class="lg:col-span-5">
           <div class="bg-surface-container-lowest rounded-2xl p-8 relative overflow-hidden"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.05)">
-            <div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary-container/30 rounded-full blur-3xl pointer-events-none" />
+            <div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-soft/30 rounded-full blur-3xl pointer-events-none" />
             <div class="relative">
               <div class="flex items-center gap-3 mb-6">
-                <div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center text-white">
+                <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white">
                   <span class="material-symbols-outlined filled text-[24px]">analytics</span>
                 </div>
                 <div>
-                  <p class="text-xs font-bold tracking-widest text-secondary uppercase">3 秒理解产品</p>
+                  <p class="text-xs font-bold tracking-widest text-primary uppercase">3 秒理解产品</p>
                   <p class="text-sm text-on-surface-variant">诊断当前状态，再匹配提升服务</p>
                 </div>
               </div>
@@ -45,7 +45,7 @@
               <div class="space-y-4">
                 <div v-for="item in heroPoints" :key="item.title"
                   class="flex items-start gap-4 bg-surface-container-low rounded-xl p-4">
-                  <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-white text-secondary flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-white text-primary flex-shrink-0">
                     <span class="material-symbols-outlined text-[20px]">{{ item.icon }}</span>
                   </div>
                   <div>
@@ -55,8 +55,8 @@
                 </div>
               </div>
 
-              <div class="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container/35 text-on-secondary-container text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <div class="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-soft text-primary text-xs font-bold">
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
                 从陌生访客到测评用户的第一跳
               </div>
             </div>
@@ -83,7 +83,7 @@
             <p class="text-sm text-on-surface-variant">首页只做极简预览，完整方案在服务页展开。</p>
           </div>
           <router-link to="/services"
-            class="text-secondary font-bold text-sm whitespace-nowrap hover:underline">
+            class="text-primary font-bold text-sm whitespace-nowrap hover:underline">
             查看完整服务体系
           </router-link>
         </div>
@@ -102,7 +102,7 @@
             <p class="text-xs font-bold tracking-widest uppercase mb-2" :class="layer.labelColor">{{ layer.step }}</p>
             <h3 class="font-headline font-bold text-xl text-on-surface mb-3">{{ layer.title }}</h3>
             <p class="text-sm text-on-surface-variant leading-relaxed mb-5">{{ layer.desc }}</p>
-            <div class="text-sm font-bold text-secondary flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+            <div class="text-sm font-bold text-primary flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
               进入服务页
               <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </div>
@@ -117,22 +117,22 @@
             <p class="text-sm text-on-surface-variant">四类典型画像都能直通同一套测评，但看到的是不同问题感受。</p>
           </div>
           <router-link to="/assessment"
-            class="text-secondary font-bold text-sm whitespace-nowrap hover:underline">
+            class="text-primary font-bold text-sm whitespace-nowrap hover:underline">
             直接进入测评
           </router-link>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <router-link v-for="persona in personas" :key="persona.title" to="/assessment"
-            class="group bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20 hover:border-secondary/30 transition-all duration-300 hover:scale-[1.02]"
+            class="group bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02]"
             style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
             <div class="flex items-start justify-between gap-5 mb-5">
               <div>
-                <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-2">{{ persona.kicker }}</p>
+                <p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">{{ persona.kicker }}</p>
                 <h3 class="font-headline font-bold text-xl text-on-surface mb-2">{{ persona.title }}</h3>
                 <p class="text-sm text-on-surface-variant leading-relaxed">{{ persona.pain }}</p>
               </div>
-              <div class="w-11 h-11 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-secondary-container/25 group-hover:text-secondary transition-colors flex-shrink-0">
+              <div class="w-11 h-11 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-primary-soft/25 group-hover:text-primary transition-colors flex-shrink-0">
                 <span class="material-symbols-outlined text-[22px]">{{ persona.icon }}</span>
               </div>
             </div>
@@ -145,7 +145,7 @@
 
             <div class="flex items-center justify-between pt-5 border-t border-surface-container-high">
               <span class="text-sm font-semibold text-on-surface">{{ persona.goal }}</span>
-              <span class="text-sm font-bold text-secondary flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+              <span class="text-sm font-bold text-primary flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                 找找你是哪种
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
               </span>
@@ -192,9 +192,9 @@ const layers = [
     desc: '先判断用户当前的科研准备状态，给出标签和优先行动建议。',
     icon: 'biotech',
     bgIcon: 'search',
-    iconBg: 'bg-secondary-container/30',
-    iconColor: 'text-secondary',
-    labelColor: 'text-secondary',
+    iconBg: 'bg-primary-soft/30',
+    iconColor: 'text-primary',
+    labelColor: 'text-primary',
   },
   {
     step: '第 2 层',
@@ -212,9 +212,9 @@ const layers = [
     desc: '把已形成的科研积累接入国际院校与资源网络，承接升学出口。',
     icon: 'public',
     bgIcon: 'flight',
-    iconBg: 'bg-purple-100',
-    iconColor: 'text-purple-600',
-    labelColor: 'text-purple-600',
+    iconBg: 'bg-primary-soft',
+    iconColor: 'text-primary',
+    labelColor: 'text-primary',
   },
 ]
 

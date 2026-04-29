@@ -6,7 +6,7 @@
 
       <!-- Hero -->
       <section class="py-16 text-center mb-16">
-        <p class="text-xs font-bold tracking-widest text-secondary uppercase mb-4">服务体系</p>
+        <p class="text-xs font-bold tracking-widest text-primary uppercase mb-4">服务体系</p>
         <h1 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-primary mb-5 leading-tight">
           先让你变得更强，<br class="hidden md:block" />再帮你走出去
         </h1>
@@ -15,9 +15,9 @@
           打造以科研能力提升为核心、国际资源对接为出口的升学支持路径。
         </p>
         <router-link to="/assessment"
-          class="inline-flex items-center gap-2 mt-8 bg-secondary text-on-secondary
-                 px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all
-                 shadow-lg shadow-secondary/20">
+          class="inline-flex items-center gap-2 mt-8 bg-primary text-white
+                 px-8 py-4 rounded-xl font-bold hover:bg-primary-hover transition-all
+                 shadow-lg shadow-primary/20">
           <span class="material-symbols-outlined text-[20px]">bolt</span>
           免费开始测评
         </router-link>
@@ -55,11 +55,11 @@
 
         <!-- Arrow connector on desktop -->
         <div class="hidden md:flex justify-center items-center gap-4 mt-6 opacity-40">
-          <div class="h-px flex-1 bg-secondary" />
-          <span class="material-symbols-outlined text-secondary">arrow_forward</span>
-          <div class="h-px flex-1 bg-secondary" />
-          <span class="material-symbols-outlined text-secondary">arrow_forward</span>
-          <div class="h-px flex-1 bg-secondary" />
+          <div class="h-px flex-1 bg-primary" />
+          <span class="material-symbols-outlined text-primary">arrow_forward</span>
+          <div class="h-px flex-1 bg-primary" />
+          <span class="material-symbols-outlined text-primary">arrow_forward</span>
+          <div class="h-px flex-1 bg-primary" />
         </div>
       </section>
 
@@ -74,13 +74,13 @@
           <div v-for="(plan, i) in plans" :key="i"
             class="rounded-2xl p-7 flex flex-col transition-all duration-300 hover:scale-[1.02]"
             :class="plan.highlight
-              ? 'bg-primary-container text-white'
+              ? 'blue-banner text-white'
               : 'bg-surface-container-lowest border border-outline-variant/20'"
             style="box-shadow: 0 4px 16px rgba(15,23,42,0.05)">
             <div class="mb-5">
               <span class="text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full mb-3 inline-block"
                 :class="plan.highlight
-                  ? 'bg-secondary text-white'
+                  ? 'bg-white text-primary'
                   : 'bg-surface-container-high text-on-surface-variant'">
                 {{ plan.badge }}
               </span>
@@ -89,7 +89,7 @@
                 {{ plan.name }}
               </h3>
               <p class="text-sm leading-relaxed"
-                :class="plan.highlight ? 'text-on-primary-container' : 'text-on-surface-variant'">
+                :class="plan.highlight ? 'text-white/75' : 'text-on-surface-variant'">
                 {{ plan.desc }}
               </p>
             </div>
@@ -100,7 +100,7 @@
                 {{ plan.price }}
               </span>
               <span class="text-sm ml-1"
-                :class="plan.highlight ? 'text-on-primary-container' : 'text-on-surface-variant'">
+                :class="plan.highlight ? 'text-white/75' : 'text-on-surface-variant'">
                 {{ plan.period }}
               </span>
             </div>
@@ -108,10 +108,10 @@
             <ul class="space-y-2.5 mb-7 flex-1">
               <li v-for="feat in plan.features" :key="feat" class="flex items-start gap-2 text-sm">
                 <span class="material-symbols-outlined text-[16px] mt-0.5 flex-shrink-0"
-                  :class="plan.highlight ? 'text-secondary-container' : 'text-secondary'">
+                  :class="plan.highlight ? 'text-white' : 'text-primary'">
                   check_circle
                 </span>
-                <span :class="plan.highlight ? 'text-on-primary-container' : 'text-on-surface-variant'">
+                <span :class="plan.highlight ? 'text-white/80' : 'text-on-surface-variant'">
                   {{ feat }}
                 </span>
               </li>
@@ -120,7 +120,7 @@
             <router-link :to="plan.link"
               class="flex items-center justify-center w-full py-3.5 rounded-xl font-bold text-sm transition-all gap-1.5"
               :class="plan.highlight
-                ? 'bg-secondary text-white hover:opacity-90'
+                ? 'bg-white text-primary hover:bg-primary-soft'
                 : 'bg-surface-container-high text-on-surface hover:bg-surface-dim'">
               {{ plan.cta }}
               <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -138,8 +138,8 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div v-for="trust in trustPoints" :key="trust.title" class="text-center">
-            <div class="w-14 h-14 rounded-2xl mx-auto mb-3 flex items-center justify-center bg-secondary-container/30">
-              <span class="material-symbols-outlined text-secondary text-[28px]">{{ trust.icon }}</span>
+            <div class="w-14 h-14 rounded-2xl mx-auto mb-3 flex items-center justify-center bg-primary-soft/30">
+              <span class="material-symbols-outlined text-primary text-[28px]">{{ trust.icon }}</span>
             </div>
             <p class="font-headline font-bold text-2xl text-on-surface mb-1">{{ trust.stat }}</p>
             <p class="text-sm text-on-surface-variant">{{ trust.title }}</p>
@@ -174,9 +174,9 @@ const layers = [
     source: 'Credamo 调研问卷平台 + 数据分析能力',
     icon: 'biotech',
     bgIcon: 'search',
-    iconBg: 'bg-secondary-container/30',
-    iconColor: 'text-secondary',
-    labelColor: 'text-secondary',
+    iconBg: 'bg-primary-soft/30',
+    iconColor: 'text-primary',
+    labelColor: 'text-primary',
   },
   {
     title: '提升层',
@@ -194,9 +194,9 @@ const layers = [
     source: 'Credamo Inc. + 国际院校合作网络',
     icon: 'public',
     bgIcon: 'flight',
-    iconBg: 'bg-purple-100',
-    iconColor: 'text-purple-600',
-    labelColor: 'text-purple-600',
+    iconBg: 'bg-primary-soft',
+    iconColor: 'text-primary',
+    labelColor: 'text-primary',
   },
 ]
 

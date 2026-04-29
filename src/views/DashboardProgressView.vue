@@ -2,14 +2,14 @@
   <div class="space-y-6">
     <section class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
       <div>
-        <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-3">Progress Tracking</p>
+        <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Progress Tracking</p>
         <h1 class="font-headline font-bold text-3xl text-on-surface mb-2">科研进度</h1>
         <p class="text-on-surface-variant max-w-2xl">
           当前处于科研启动包第 2 月第 3 周，重点从“看文献”切换到“做归纳”和“带问题沟通”。
         </p>
       </div>
       <router-link to="/consult"
-        class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
+        class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
         预约复盘
         <span class="material-symbols-outlined text-[18px]">event_available</span>
       </router-link>
@@ -21,7 +21,7 @@
         style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
         <div class="flex justify-between items-start mb-4">
           <p class="text-xs font-bold tracking-wider uppercase text-on-surface-variant">{{ card.title }}</p>
-          <span class="material-symbols-outlined text-secondary text-[20px]">{{ card.icon }}</span>
+          <span class="material-symbols-outlined text-primary text-[20px]">{{ card.icon }}</span>
         </div>
         <p class="font-headline font-bold text-3xl text-on-surface mb-2">{{ card.value }}</p>
         <p class="text-sm text-on-surface-variant">{{ card.note }}</p>
@@ -95,7 +95,7 @@
           <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">本周任务板</h2>
           <p class="text-sm text-on-surface-variant">任务按阅读、导师沟通和输出分类，而不是混成一个待办列表。</p>
         </div>
-        <span class="text-sm font-bold text-secondary">{{ tasks.filter((item) => item.done).length }}/{{ tasks.length }} 已完成</span>
+        <span class="text-sm font-bold text-primary">{{ tasks.filter((item) => item.done).length }}/{{ tasks.length }} 已完成</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -147,8 +147,8 @@ const statusStyles = {
     pill: 'bg-emerald-100 text-emerald-700',
   },
   进行中: {
-    dot: 'bg-secondary-container/40 text-secondary',
-    pill: 'bg-secondary-container/40 text-secondary',
+    dot: 'bg-primary-soft/40 text-primary',
+    pill: 'bg-primary-soft/40 text-primary',
   },
   即将开始: {
     dot: 'bg-surface-container-high text-on-surface-variant',
@@ -159,7 +159,7 @@ const statusStyles = {
 const tagStyles = {
   urgent: 'bg-yellow-100 text-yellow-700',
   learning: 'bg-blue-100 text-blue-700',
-  meeting: 'bg-purple-100 text-purple-700',
+  meeting: 'bg-primary-soft text-primary',
 }
 
 const taskGroups = computed(() => {

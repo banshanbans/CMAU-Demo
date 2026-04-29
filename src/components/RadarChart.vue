@@ -13,12 +13,12 @@
 
       <!-- Data shape -->
       <polygon :points="dataPoints"
-        fill="rgba(0,106,97,0.12)" stroke="#006a61" stroke-width="1.5"
+        fill="rgba(45,74,171,0.12)" stroke="#2D4AAB" stroke-width="1.5"
         stroke-linejoin="round" />
 
       <!-- Data dots -->
       <circle v-for="(pt, i) in scaledPoints" :key="'dot'+i"
-        :cx="pt.x" :cy="pt.y" r="3" fill="#006a61" />
+        :cx="pt.x" :cy="pt.y" r="3" fill="#2D4AAB" />
     </svg>
 
     <!-- Axis labels -->

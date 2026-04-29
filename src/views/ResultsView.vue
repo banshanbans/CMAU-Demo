@@ -16,8 +16,8 @@
         </div>
         <div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2.5 rounded-full"
              style="box-shadow: 0 2px 8px rgba(15,23,42,0.06)">
-          <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center
-                      text-on-primary-container font-bold text-sm">李</div>
+          <div class="w-9 h-9 rounded-full bg-primary-soft flex items-center justify-center
+                      text-primary font-bold text-sm">李</div>
           <div>
             <p class="text-xs font-bold text-primary leading-tight uppercase tracking-wider">Research Scholar</p>
             <p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Master Candidate</p>
@@ -36,7 +36,7 @@
             <span class="material-symbols-outlined text-[120px]">analytics</span>
           </div>
           <h3 class="font-headline font-semibold text-lg self-start mb-6 flex items-center gap-2">
-            <span class="w-2 h-5 bg-secondary rounded-full"></span>
+            <span class="w-2 h-5 bg-primary rounded-full"></span>
             核心能力维度
           </h3>
           <RadarChart :scores="radarScores" :labels="radarLabels" :size="280" />
@@ -45,7 +45,7 @@
         <!-- Status + Tags -->
         <section class="lg:col-span-5 flex flex-col gap-5">
           <!-- Status card -->
-          <div class="bg-primary-container text-white p-7 rounded-2xl flex-1 flex flex-col justify-center">
+          <div class="blue-banner text-white p-7 rounded-2xl flex-1 flex flex-col justify-center">
             <p class="text-[10px] font-label tracking-widest uppercase mb-2 opacity-60">CURRENT STATUS</p>
             <p class="text-3xl font-headline font-bold mb-5">备战冲刺期</p>
             <div class="flex flex-wrap gap-2">
@@ -61,7 +61,7 @@
           <div class="bg-surface-container-low p-6 rounded-2xl"
                style="border: 1px solid rgba(198,198,205,0.15)">
             <h4 class="font-bold text-sm mb-3 text-on-surface-variant flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-secondary">lightbulb</span>
+              <span class="material-symbols-outlined text-[18px] text-primary">lightbulb</span>
               评估结论
             </h4>
             <p class="text-sm leading-relaxed text-on-surface italic">
@@ -75,20 +75,20 @@
       <section class="bg-surface-container-lowest rounded-2xl p-8 mb-10"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
         <h2 class="font-headline font-bold text-xl mb-6 flex items-center gap-2">
-          <span class="w-2 h-5 bg-secondary rounded-full"></span>
+          <span class="w-2 h-5 bg-primary rounded-full"></span>
           各维度评分详情
         </h2>
         <div class="space-y-4">
           <div v-for="(item, i) in dimensionDetails" :key="i">
             <div class="flex justify-between items-center mb-1.5">
               <span class="text-sm font-medium text-on-surface">{{ item.label }}</span>
-              <span class="text-sm font-bold" :class="item.score >= 0.6 ? 'text-secondary' : item.score >= 0.4 ? 'text-yellow-600' : 'text-error'">
+              <span class="text-sm font-bold" :class="item.score >= 0.6 ? 'text-primary' : item.score >= 0.4 ? 'text-yellow-600' : 'text-error'">
                 {{ Math.round(item.score * 100) }}分
               </span>
             </div>
             <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
               <div class="h-full rounded-full transition-all duration-700"
-                :style="{ width: item.score * 100 + '%', background: item.score >= 0.6 ? '#006a61' : item.score >= 0.4 ? '#EAB308' : '#EF4444' }" />
+                :style="{ width: item.score * 100 + '%', background: item.score >= 0.6 ? '#2D4AAB' : item.score >= 0.4 ? '#EAB308' : '#EF4444' }" />
             </div>
             <p class="text-xs text-on-surface-variant mt-1">{{ item.note }}</p>
           </div>
@@ -101,7 +101,7 @@
           <h2 class="font-headline font-bold text-2xl tracking-tight">根据你的标签，我们推荐</h2>
           <div class="h-px flex-1 bg-surface-container-high mx-8 hidden md:block" />
           <router-link to="/services"
-            class="text-secondary font-bold text-sm hover:underline whitespace-nowrap">
+            class="text-primary font-bold text-sm hover:underline whitespace-nowrap">
             查看全部方案
           </router-link>
         </div>
@@ -109,12 +109,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Card 1: Highlighted -->
           <div class="group bg-surface-container-lowest rounded-2xl p-8 relative overflow-hidden
-                      border-2 border-secondary-container transition-all duration-300 hover:scale-[1.02]"
+                      border-2 border-primary-soft transition-all duration-300 hover:scale-[1.02]"
                style="box-shadow: 0 4px 20px rgba(0,106,97,0.08)">
-            <div class="absolute -right-6 -top-6 w-28 h-28 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none" />
+            <div class="absolute -right-6 -top-6 w-28 h-28 bg-primary-soft/20 rounded-full blur-2xl pointer-events-none" />
             <div class="flex justify-between items-start mb-5">
               <div>
-                <span class="bg-secondary text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 inline-block uppercase tracking-wider">
+                <span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 inline-block uppercase tracking-wider">
                   推荐
                 </span>
                 <h3 class="font-headline font-bold text-xl text-primary">科研启动包</h3>
@@ -126,7 +126,7 @@
             </div>
             <ul class="space-y-3 mb-7">
               <li v-for="feat in pkg1features" :key="feat" class="flex items-start gap-2.5">
-                <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
+                <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
                 <span class="text-sm text-on-surface-variant">{{ feat }}</span>
               </li>
             </ul>
@@ -181,7 +181,7 @@
           <div class="text-xs">
             <p class="font-bold text-on-surface">觉得评估不准？</p>
             <p class="text-on-surface-variant">
-              <router-link to="/assessment" class="hover:text-secondary">重新测评</router-link>
+              <router-link to="/assessment" class="hover:text-primary">重新测评</router-link>
               ，帮助我们优化算法
             </p>
           </div>

@@ -2,14 +2,14 @@
   <div class="space-y-6">
     <section class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
       <div>
-        <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-3">Resource Matching</p>
+        <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Resource Matching</p>
         <h1 class="font-headline font-bold text-3xl text-on-surface mb-2">资源对接</h1>
         <p class="text-on-surface-variant max-w-2xl">
           当前已经从“诊断结果”进入“资源承接”阶段，系统会根据你的标签和节奏推荐可跟进资源。
         </p>
       </div>
       <router-link to="/consult"
-        class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
+        class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
         发起匹配咨询
         <span class="material-symbols-outlined text-[18px]">hub</span>
       </router-link>
@@ -21,7 +21,7 @@
         style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
         <div class="flex justify-between items-start mb-4">
           <p class="text-xs font-bold tracking-wider uppercase text-on-surface-variant">{{ card.title }}</p>
-          <span class="material-symbols-outlined text-secondary text-[20px]">{{ card.icon }}</span>
+          <span class="material-symbols-outlined text-primary text-[20px]">{{ card.icon }}</span>
         </div>
         <p class="font-headline font-bold text-3xl text-on-surface mb-2">{{ card.value }}</p>
         <p class="text-sm text-on-surface-variant">{{ card.note }}</p>
@@ -38,7 +38,7 @@
             class="bg-surface-container-low rounded-2xl p-5 border border-outline-variant/10">
             <div class="flex items-start justify-between gap-4 mb-3">
               <div>
-                <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-2">{{ card.type }}</p>
+                <p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">{{ card.type }}</p>
                 <h3 class="font-semibold text-on-surface">{{ card.title }}</h3>
               </div>
               <span class="px-2 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase"
@@ -70,17 +70,17 @@
           </div>
         </section>
 
-        <section class="bg-primary-container rounded-2xl p-6 text-white">
-          <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-3">Saved & Next Step</p>
+        <section class="blue-banner rounded-2xl p-6 text-white">
+          <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Saved & Next Step</p>
           <div class="space-y-3 mb-5">
             <div v-for="item in savedResources" :key="item.title" class="bg-white/5 rounded-xl p-4 border border-white/10">
               <p class="font-semibold text-white mb-1">{{ item.title }}</p>
-              <p class="text-xs text-on-primary-container">{{ item.nextStep }}</p>
+              <p class="text-xs text-white/75">{{ item.nextStep }}</p>
             </div>
           </div>
           <div class="flex flex-col gap-3">
             <router-link to="/consult"
-              class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-5 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
               预约咨询
               <span class="material-symbols-outlined text-[18px]">event_available</span>
             </router-link>
@@ -112,7 +112,7 @@ const matchingRules = [
 ]
 
 const resourceStatusStyles = {
-  推荐中: 'bg-secondary-container/40 text-secondary',
+  推荐中: 'bg-primary-soft/40 text-primary',
   可申请: 'bg-blue-100 text-blue-700',
   已收藏: 'bg-emerald-100 text-emerald-700',
   待沟通: 'bg-yellow-100 text-yellow-700',

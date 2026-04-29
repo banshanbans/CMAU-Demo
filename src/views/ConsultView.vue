@@ -4,7 +4,7 @@
 
     <main class="pt-24 pb-20 px-6 max-w-5xl mx-auto">
       <section class="py-10 mb-8">
-        <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-4">Consult Booking</p>
+        <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">Consult Booking</p>
         <h1 class="font-headline font-bold text-4xl tracking-tight text-primary mb-4">
           预约 1v1 咨询，把测评和服务真正接到人工承接入口。
         </h1>
@@ -21,7 +21,7 @@
           <div class="space-y-4">
             <div v-for="step in steps" :key="step.title" class="bg-surface-container-low rounded-2xl p-4">
               <div class="flex items-center gap-3 mb-2">
-                <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-secondary font-bold text-sm">
+                <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary font-bold text-sm">
                   {{ step.id }}
                 </div>
                 <p class="font-semibold text-on-surface">{{ step.title }}</p>
@@ -45,8 +45,8 @@
                     @click="form.consultType = option.value"
                     class="text-left rounded-2xl p-5 transition-all border-2"
                     :class="form.consultType === option.value
-                      ? 'bg-secondary text-white border-secondary shadow-lg shadow-secondary/20'
-                      : 'bg-surface-container-low border-transparent hover:border-secondary/20'">
+                      ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20'
+                      : 'bg-surface-container-low border-transparent hover:border-primary/20'">
                     <p class="font-semibold mb-2">{{ option.label }}</p>
                     <p class="text-sm leading-relaxed"
                       :class="form.consultType === option.value ? 'text-white/80' : 'text-on-surface-variant'">
@@ -66,7 +66,7 @@
                     @click="form.timeSlot = slot"
                     class="rounded-xl px-4 py-4 font-medium transition-all border-2"
                     :class="form.timeSlot === slot
-                      ? 'bg-primary-container text-white border-primary-container'
+                      ? 'bg-primary text-white border-primary'
                       : 'bg-surface-container-low border-transparent text-on-surface hover:border-outline-variant/40'">
                     {{ slot }}
                   </button>
@@ -79,12 +79,12 @@
                   <label class="block">
                     <span class="block text-sm font-semibold text-on-surface mb-2">当前身份</span>
                     <input v-model="form.identity" type="text"
-                      class="w-full rounded-xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-secondary" />
+                      class="w-full rounded-xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-primary" />
                   </label>
                   <label class="block">
                     <span class="block text-sm font-semibold text-on-surface mb-2">目标方向</span>
                     <input v-model="form.goal" type="text"
-                      class="w-full rounded-xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-secondary" />
+                      class="w-full rounded-xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-primary" />
                   </label>
                 </div>
 
@@ -94,7 +94,7 @@
                     <span v-if="errors.summary" class="text-sm text-error">{{ errors.summary }}</span>
                   </div>
                   <textarea v-model="form.summary" rows="5"
-                    class="w-full rounded-2xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-secondary resize-none"
+                    class="w-full rounded-2xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-primary resize-none"
                     placeholder="例如：科研经历较弱，不知道是否要先做方向诊断，想确认三个月应该优先补什么。"></textarea>
                 </label>
               </section>
@@ -107,7 +107,7 @@
                 <span class="material-symbols-outlined text-[18px]">arrow_back</span>
               </router-link>
               <button @click="submitForm"
-                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold bg-secondary text-white hover:opacity-90 transition-all">
+                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold bg-primary text-white hover:opacity-90 transition-all">
                 提交预约
                 <span class="material-symbols-outlined text-[18px]">check_circle</span>
               </button>
@@ -115,10 +115,10 @@
           </template>
 
           <template v-else>
-            <div class="bg-primary-container rounded-2xl p-8 text-white mb-6">
-              <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-3">Booking Confirmed</p>
+            <div class="blue-banner rounded-2xl p-8 text-white mb-6">
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Booking Confirmed</p>
               <h2 class="font-headline font-bold text-3xl mb-3">预约信息已提交</h2>
-              <p class="text-sm text-on-primary-container leading-relaxed">
+              <p class="text-sm text-white/80 leading-relaxed">
                 演示场景下不发真实请求。你填写的信息已进入确认态，可用于说明服务承接入口是完整可操作的。
               </p>
             </div>
@@ -149,7 +149,7 @@
 
             <div class="flex flex-col sm:flex-row gap-4">
               <router-link to="/assessment"
-                class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
+                class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
                 去做测评
                 <span class="material-symbols-outlined text-[18px]">bolt</span>
               </router-link>

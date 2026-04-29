@@ -2,6 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    background: #ffffff;
+  }
+
+  body {
+    background: #ffffff;
+    color: #1d2433;
+  }
+
+  button,
+  a,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .app-page {
+    @apply min-h-screen bg-background font-body text-on-background;
+  }
+
+  .page-shell {
+    @apply pt-24 pb-20 px-6 max-w-6xl mx-auto;
+  }
+
+  .section-shell {
+    @apply bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-card;
+  }
+
+  .dashboard-card {
+    @apply bg-surface-container-lowest rounded-2xl p-6 shadow-card transition-all;
+  }
+
+  .dashboard-card-hover {
+    @apply hover:-translate-y-0.5 hover:shadow-card-hover;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-bold text-white transition-all hover:bg-primary-hover;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary-soft px-6 py-3 font-bold text-primary transition-all hover:bg-primary-muted;
+  }
+
+  .tertiary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-bold text-primary transition-all hover:bg-primary-soft;
+  }
+
+  .icon-shortcut {
+    @apply flex h-9 w-9 items-center justify-center rounded-[10px] bg-primary-soft text-primary;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest;
+  }
+
+  .progress-track {
+    @apply h-1.5 overflow-hidden rounded-full bg-surface-container-high;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full bg-primary transition-all;
+  }
+
+  .soft-banner {
+    @apply rounded-2xl bg-primary-soft p-6 text-primary;
+  }
+
+  .blue-banner {
+    background: linear-gradient(135deg, #2d4aab 0%, #4f6fea 58%, #8ba6ff 100%);
+  }
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   user-select: none;
@@ -19,7 +95,7 @@
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #c6c6cd; border-radius: 99px; }
+::-webkit-scrollbar-thumb { background: #dde6ff; border-radius: 99px; }
 
 /* Page transition */
 .fade-enter-active, .fade-leave-active {

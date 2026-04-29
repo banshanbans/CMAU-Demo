@@ -1,22 +1,20 @@
 <template>
   <div class="min-h-screen bg-background font-body text-on-background flex">
-    <aside class="h-screen w-64 fixed left-0 top-0 bg-slate-50 flex flex-col p-4 z-40"
-           style="border-right: 1px solid rgba(198,198,205,0.2)">
+    <aside class="h-screen w-64 fixed left-0 top-0 bg-surface-subtle flex flex-col p-4 z-40">
       <div class="px-3 py-5 flex items-center gap-3 mb-2">
-        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-card">
           <span class="text-white font-headline font-bold text-lg">见</span>
         </div>
         <div>
           <h1 class="font-headline font-bold text-on-surface tracking-tight leading-tight">见数·科研</h1>
-          <p class="text-[10px] text-on-primary-container font-medium uppercase tracking-widest">Research Scholar</p>
+          <p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest">Research Scholar</p>
         </div>
       </div>
 
       <div class="mb-6 px-2">
-        <div class="bg-white rounded-xl p-4 flex items-center gap-3"
-             style="box-shadow: 0 2px 8px rgba(15,23,42,0.05)">
-          <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center
-                      text-on-primary-container font-bold">李</div>
+        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-card">
+          <div class="w-10 h-10 rounded-full bg-primary-soft flex items-center justify-center
+                      text-primary font-bold">李</div>
           <div class="flex-1 overflow-hidden">
             <p class="text-sm font-bold text-on-surface truncate">李同学</p>
             <p class="text-[11px] text-on-surface-variant">Master Candidate</p>
@@ -28,8 +26,8 @@
         <router-link v-for="item in dashboardNavItems" :key="item.to" :to="item.to"
           class="flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl transition-all text-sm"
           :class="isActive(item.to)
-            ? 'bg-white font-bold text-on-surface shadow-sm shadow-slate-200'
-            : 'text-on-surface-variant hover:bg-slate-100/50 hover:text-on-surface'">
+            ? 'bg-primary-soft font-bold text-primary shadow-sm'
+            : 'text-on-surface-variant hover:bg-white hover:text-primary'">
           <span class="flex items-center gap-3 min-w-0">
             <span class="material-symbols-outlined text-[20px]"
               :style="isActive(item.to) ? 'font-variation-settings: FILL 1, wght 400, GRAD 0, opsz 24' : ''">
@@ -47,7 +45,7 @@
         </router-link>
       </nav>
 
-      <div class="pt-4" style="border-top: 1px solid rgba(198,198,205,0.3)">
+      <div class="pt-4">
         <router-link to="/assessment"
           class="flex items-center gap-3 px-3 py-2 text-on-surface-variant
                  hover:bg-red-50 hover:text-red-600 rounded-xl transition-all text-sm">
@@ -57,25 +55,24 @@
       </div>
     </aside>
 
-    <main class="ml-64 flex-1 min-h-screen p-8">
-      <header class="mb-8 flex justify-between items-end">
+    <main class="ml-64 flex-1 min-h-screen p-8 bg-background">
+      <header class="mb-8 flex justify-between items-center min-h-14">
         <div>
           <h2 class="font-headline text-2xl font-semibold text-on-surface mb-1">
             你好，李同学 👋
           </h2>
-          <p class="text-on-primary-container font-medium flex items-center gap-1.5">
+          <p class="text-on-surface-variant font-medium flex items-center gap-1.5">
             <span class="material-symbols-outlined text-[16px]">calendar_today</span>
             距离申请季还有 <span class="text-primary font-bold mx-1">8</span> 个月
           </p>
         </div>
         <div class="flex items-center gap-3">
           <button class="w-9 h-9 flex items-center justify-center rounded-xl
-                         bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors">
+                         bg-surface-container-low text-on-surface hover:bg-primary-soft hover:text-primary transition-colors">
             <span class="material-symbols-outlined text-[20px]">search</span>
           </button>
           <router-link to="/consult"
-            class="bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-xl
-                   font-bold text-sm hover:opacity-90 transition-all flex items-center gap-2">
+            class="primary-button px-5 py-2.5 text-sm">
             <span class="material-symbols-outlined text-[18px]">edit_calendar</span>
             预约咨询
           </router-link>

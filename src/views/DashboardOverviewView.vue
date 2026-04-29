@@ -6,13 +6,13 @@
            style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
         <div class="flex justify-between items-start mb-4">
           <p class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">科研准备度</p>
-          <span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+          <span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
         </div>
         <div class="flex items-center gap-5">
           <div class="relative w-20 h-20 flex-shrink-0">
             <svg class="w-full h-full -rotate-90">
               <circle cx="40" cy="40" r="34" fill="transparent" stroke="#eceef0" stroke-width="8" />
-              <circle cx="40" cy="40" r="34" fill="transparent" stroke="#006a61" stroke-width="8"
+              <circle cx="40" cy="40" r="34" fill="transparent" stroke="#2D4AAB" stroke-width="8"
                 stroke-dasharray="213.6" stroke-dashoffset="123.9" stroke-linecap="round" />
             </svg>
             <div class="absolute inset-0 flex items-center justify-center">
@@ -34,7 +34,7 @@
            style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
         <div class="flex justify-between items-start mb-4">
           <p class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">当前服务</p>
-          <span class="material-symbols-outlined text-on-primary-container text-[20px]">package_2</span>
+          <span class="material-symbols-outlined text-primary text-[20px]">package_2</span>
         </div>
         <h3 class="text-xl font-headline font-bold text-on-surface mb-2">科研启动包</h3>
         <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold gap-1.5">
@@ -76,9 +76,9 @@
             class="group flex items-center p-4 rounded-xl cursor-pointer transition-all"
             :class="task.done
               ? 'bg-surface-container-low/50'
-              : 'bg-white border border-surface-container-high hover:border-secondary'">
+              : 'bg-white border border-surface-container-high hover:border-primary'">
             <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 transition-all"
-              :class="task.done ? 'bg-emerald-100' : 'border-2 border-outline-variant group-hover:border-secondary'">
+              :class="task.done ? 'bg-emerald-100' : 'border-2 border-outline-variant group-hover:border-primary'">
               <span v-if="task.done"
                 class="material-symbols-outlined text-emerald-600 text-[16px]"
                 style="font-variation-settings: 'wght' 700">check</span>
@@ -94,7 +94,7 @@
               :class="{
                 'bg-yellow-100 text-yellow-700': task.tag === 'urgent',
                 'bg-blue-100 text-blue-700': task.tag === 'learning',
-                'bg-purple-100 text-purple-700': task.tag === 'meeting',
+                'bg-primary-soft text-primary': task.tag === 'meeting',
               }">
               {{ task.tagLabel }}
             </span>
@@ -103,7 +103,7 @@
 
         <button class="mt-5 w-full py-3 rounded-xl border-2 border-dashed border-surface-container-high
                        text-on-surface-variant text-sm font-medium flex items-center justify-center gap-2
-                       hover:border-secondary/40 hover:text-secondary transition-all">
+                       hover:border-primary/40 hover:text-primary transition-all">
           <span class="material-symbols-outlined text-[18px]">add</span>
           添加新任务
         </button>
@@ -113,25 +113,25 @@
            style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
         <div class="flex justify-between items-start mb-4">
           <p class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">本周复盘反馈</p>
-          <span class="material-symbols-outlined text-secondary text-[20px]">psychology</span>
+          <span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
         </div>
         <p class="text-sm text-on-surface mb-2">系统已根据本周任务完成情况生成 3 条反馈。</p>
         <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
           核心问题不在于任务数量，而在于文献阅读和导师沟通之间还缺少稳定的连接动作。
         </p>
         <button @click="showReviewModal = true"
-          class="inline-flex items-center gap-1 text-sm font-bold text-secondary hover:underline">
+          class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">
           查看本周复盘反馈
           <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </button>
       </div>
 
-      <section class="col-span-12 xl:col-span-3 relative overflow-hidden bg-primary-container rounded-2xl p-6 text-white"
+      <section class="col-span-12 xl:col-span-3 relative overflow-hidden blue-banner rounded-2xl p-6 text-white"
                style="box-shadow: 0 2px 12px rgba(15,23,42,0.08)">
         <div class="relative z-10">
-          <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-3">Featured Event</p>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Featured Event</p>
           <h3 class="font-headline font-bold text-xl text-white mb-3">探索科研前沿</h3>
-          <p class="text-sm text-on-primary-container leading-relaxed mb-5">
+          <p class="text-sm text-white/80 leading-relaxed mb-5">
             加入本周六的线上研讨会，与 Top 30 院校校友交流最新科研趋势。
           </p>
           <div class="flex flex-col gap-3">
@@ -146,36 +146,36 @@
             </router-link>
           </div>
         </div>
-        <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-secondary/20 rounded-full blur-2xl pointer-events-none" />
+        <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-white/15 rounded-full blur-2xl pointer-events-none" />
         <div class="absolute right-4 top-4 opacity-10 pointer-events-none">
           <span class="material-symbols-outlined text-[84px]">school</span>
         </div>
       </section>
 
       <div class="col-span-12">
-        <section class="bg-tertiary-container text-on-tertiary-container rounded-2xl p-10
+        <section class="bg-primary-soft text-primary rounded-2xl p-10
                         flex flex-col md:flex-row items-center justify-between gap-8"
                  style="box-shadow: 0 2px 12px rgba(15,23,42,0.05)">
           <div class="max-w-xl">
             <span class="inline-flex items-center px-3 py-1 rounded-full bg-black/30
-                         text-secondary-fixed text-[10px] font-bold uppercase tracking-widest mb-5">
+                         text-primary text-[10px] font-bold uppercase tracking-widest mb-5">
               Monthly Insight
             </span>
-            <h3 class="text-2xl md:text-3xl font-headline font-bold mb-4 leading-tight text-on-tertiary-container">
+            <h3 class="text-2xl md:text-3xl font-headline font-bold mb-4 leading-tight text-on-surface">
               跨学科研究正成为顶级学府录取的"金钥匙"。
             </h3>
             <p class="text-sm leading-relaxed opacity-70 mb-5">
               根据 2024 年秋季录取趋势，超过 40% 的获录学生在其简历中展示了至少一个跨领域研究项目。
             </p>
             <router-link to="/content"
-              class="inline-flex items-center gap-2 text-sm font-bold text-secondary-fixed hover:underline">
+              class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline">
               查看内容建议
               <span class="material-symbols-outlined text-[18px]">article</span>
             </router-link>
           </div>
           <div class="flex-shrink-0">
-            <div class="w-56 h-36 rounded-2xl bg-secondary/20 flex items-center justify-center rotate-3 hover:rotate-0 transition-transform duration-500">
-              <span class="material-symbols-outlined text-[64px] text-secondary-fixed opacity-60">trending_up</span>
+            <div class="w-56 h-36 rounded-2xl bg-white flex items-center justify-center rotate-3 hover:rotate-0 transition-transform duration-500 shadow-card">
+              <span class="material-symbols-outlined text-[64px] text-primary opacity-70">trending_up</span>
             </div>
           </div>
         </section>
@@ -192,7 +192,7 @@
         </button>
 
         <div class="pr-10 mb-6">
-          <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-3">Weekly Review Insight</p>
+          <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Weekly Review Insight</p>
           <h3 class="font-headline font-bold text-3xl text-on-surface mb-3">本周复盘反馈</h3>
           <p class="text-sm text-on-surface-variant leading-relaxed">
             系统根据你本周的任务完成情况、当前服务阶段和最近一次导师反馈，生成了这份复盘建议。
@@ -211,20 +211,20 @@
           </div>
         </div>
 
-        <div class="bg-primary-container rounded-2xl p-6 text-white mb-6">
-          <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-3">Recommended Actions</p>
+        <div class="blue-banner rounded-2xl p-6 text-white mb-6">
+          <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Recommended Actions</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div v-for="action in dashboardRecommendedActions" :key="action.title"
               class="bg-white/5 rounded-xl p-4 border border-white/10">
               <p class="font-semibold text-white mb-1">{{ action.title }}</p>
-              <p class="text-xs text-on-primary-container leading-relaxed">{{ action.body }}</p>
+              <p class="text-xs text-white/75 leading-relaxed">{{ action.body }}</p>
             </div>
           </div>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
           <router-link to="/consult"
-            class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
+            class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
             预约咨询
             <span class="material-symbols-outlined text-[18px]">event_available</span>
           </router-link>

@@ -7,7 +7,7 @@
       <!-- Progress -->
       <div class="mb-10">
         <div class="flex justify-between items-end mb-2">
-          <span class="text-xs font-bold tracking-widest text-secondary uppercase">
+          <span class="text-xs font-bold tracking-widest text-primary uppercase">
             {{ steps[current].section }}
           </span>
           <span class="text-sm font-semibold text-on-surface">
@@ -15,7 +15,7 @@
           </span>
         </div>
         <div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
-          <div class="h-full bg-secondary rounded-full transition-all duration-500"
+          <div class="h-full bg-primary rounded-full transition-all duration-500"
             :style="{ width: ((current + 1) / steps.length * 100) + '%' }" />
         </div>
         <p class="text-xs text-on-surface-variant mt-2">第 {{ current + 1 }} 步 / 共 {{ steps.length }} 步</p>
@@ -38,16 +38,16 @@
           @click="toggleOption(opt.value)"
           class="group relative flex flex-col items-start p-6 rounded-xl text-left transition-all duration-300"
           :class="isSelected(opt.value)
-            ? 'bg-white border-2 border-secondary shadow-sm'
-            : 'bg-surface-container-lowest border-2 border-transparent hover:border-secondary/20 hover:bg-white'">
+            ? 'bg-white border-2 border-primary shadow-sm'
+            : 'bg-surface-container-lowest border-2 border-transparent hover:border-primary/20 hover:bg-white'">
 
           <!-- Icon -->
           <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors"
             :class="isSelected(opt.value)
-              ? 'bg-secondary-container/40'
-              : 'bg-surface-container group-hover:bg-secondary-container/20'">
+              ? 'bg-primary-soft/40'
+              : 'bg-surface-container group-hover:bg-primary-soft/20'">
             <span class="material-symbols-outlined transition-colors text-[22px]"
-              :class="isSelected(opt.value) ? 'filled text-secondary' : 'text-on-surface-variant group-hover:text-secondary'"
+              :class="isSelected(opt.value) ? 'filled text-primary' : 'text-on-surface-variant group-hover:text-primary'"
               :style="isSelected(opt.value) ? 'font-variation-settings: FILL 1, wght 400, GRAD 0, opsz 24' : ''">
               {{ opt.icon }}
             </span>
@@ -59,7 +59,7 @@
           <!-- Check indicator -->
           <div class="absolute top-4 right-4 transition-all">
             <div v-if="isSelected(opt.value)"
-              class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center">
+              class="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <span class="material-symbols-outlined text-white text-[14px]"
                 style="font-variation-settings: 'wght' 700">check</span>
             </div>
@@ -70,9 +70,9 @@
       </div>
 
       <!-- Info Card -->
-      <div class="mt-auto mb-8 p-6 bg-surface-container-low rounded-2xl border-l-4 border-secondary/40">
+      <div class="mt-auto mb-8 p-6 bg-surface-container-low rounded-2xl border-l-4 border-primary/40">
         <div class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-secondary mt-0.5">info</span>
+          <span class="material-symbols-outlined text-primary mt-0.5">info</span>
           <div>
             <p class="text-sm font-semibold text-on-surface mb-1">{{ steps[current].hint.title }}</p>
             <p class="text-sm text-on-surface-variant leading-relaxed">{{ steps[current].hint.body }}</p>
@@ -94,7 +94,7 @@
           :disabled="!canProceed"
           class="px-10 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all"
           :class="canProceed
-            ? 'bg-secondary text-white hover:opacity-90 shadow-lg shadow-secondary/20'
+            ? 'bg-primary text-white hover:opacity-90 shadow-lg shadow-primary/20'
             : 'bg-surface-container-high text-on-surface-variant cursor-not-allowed'">
           {{ current === steps.length - 1 ? '查看报告' : '下一步' }}
           <span class="material-symbols-outlined text-[20px]">arrow_forward</span>

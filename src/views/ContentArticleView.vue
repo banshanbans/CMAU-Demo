@@ -6,7 +6,7 @@
       <template v-if="article">
         <section class="mb-8">
           <router-link to="/content"
-            class="inline-flex items-center gap-1 text-sm font-bold text-secondary hover:underline mb-6">
+            class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline mb-6">
             <span class="material-symbols-outlined text-[16px]">arrow_back</span>
             返回内容中心
           </router-link>
@@ -17,7 +17,7 @@
               <span class="px-2 py-1 rounded-full bg-surface-container-high text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">
                 {{ article.category }}
               </span>
-              <span class="px-2 py-1 rounded-full bg-secondary-container/30 text-[10px] font-bold tracking-widest uppercase text-secondary">
+              <span class="px-2 py-1 rounded-full bg-primary-soft/30 text-[10px] font-bold tracking-widest uppercase text-primary">
                 {{ article.readTime }}
               </span>
               <TagChip v-for="tag in article.tags" :key="tag" :color="tagColor(tag)">
@@ -33,7 +33,7 @@
             </p>
 
             <div class="bg-surface-container-low rounded-2xl p-5">
-              <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-2">适合谁阅读</p>
+              <p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">适合谁阅读</p>
               <p class="text-sm text-on-surface">{{ article.audience }}</p>
             </div>
           </div>
@@ -53,7 +53,7 @@
               <ul v-if="section.bullets?.length" class="mt-5 space-y-3">
                 <li v-for="bullet in section.bullets" :key="bullet"
                   class="flex items-start gap-3 text-sm text-on-surface-variant">
-                  <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
                   <span>{{ bullet }}</span>
                 </li>
               </ul>
@@ -62,15 +62,15 @@
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-primary-container rounded-2xl p-7 text-white">
-            <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-2">Next Action</p>
+          <div class="blue-banner rounded-2xl p-7 text-white">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-2">Next Action</p>
             <h3 class="font-headline font-bold text-2xl mb-3">看完之后，先判断你属于哪种状态。</h3>
-            <p class="text-sm text-on-primary-container leading-relaxed mb-5">
+            <p class="text-sm text-white/80 leading-relaxed mb-5">
               如果你还无法清楚判断自己是“科研空白”“冲刺期”还是“高焦虑”，先做测评比继续泛看内容更高效。
             </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <router-link to="/assessment"
-                class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-5 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+                class="inline-flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
                 去做测评
                 <span class="material-symbols-outlined text-[18px]">bolt</span>
               </router-link>
@@ -102,7 +102,7 @@
         <h1 class="font-headline font-bold text-3xl text-on-surface mb-3">内容建设中</h1>
         <p class="text-on-surface-variant mb-6">这篇文章的详情还没有整理完成，你可以先返回内容中心查看其他文章。</p>
         <router-link to="/content"
-          class="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
+          class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
           返回内容中心
           <span class="material-symbols-outlined text-[18px]">arrow_back</span>
         </router-link>

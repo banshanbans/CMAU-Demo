@@ -9,7 +9,7 @@
           <div class="absolute top-0 right-0 p-6 opacity-[0.04] pointer-events-none">
             <span class="material-symbols-outlined text-[120px]">school</span>
           </div>
-          <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-4">Service Detail</p>
+          <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">Service Detail</p>
           <h1 class="font-headline font-bold text-4xl tracking-tight text-primary mb-4">科研启动包</h1>
           <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl mb-6">
             面向科研起步、方向不清、焦虑感较强但已有明确升学意向的用户，
@@ -23,7 +23,7 @@
           </div>
           <div class="flex flex-col sm:flex-row gap-4">
             <router-link to="/assessment"
-              class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all shadow-lg shadow-secondary/20">
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/20">
               <span class="material-symbols-outlined text-[20px]">bolt</span>
               回到测评
             </router-link>
@@ -36,14 +36,14 @@
         </div>
 
         <div class="lg:col-span-4 flex flex-col gap-5">
-          <div class="bg-primary-container text-white rounded-2xl p-7"
+          <div class="blue-banner text-white rounded-2xl p-7"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.06)">
-            <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-2">Package Price</p>
+            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-2">Package Price</p>
             <p class="font-headline font-bold text-4xl mb-1">¥4,999</p>
-            <p class="text-sm text-on-primary-container mb-5">3 个月进阶计划 · 12 周 milestones</p>
+            <p class="text-sm text-white/80 mb-5">3 个月进阶计划 · 12 周 milestones</p>
             <div class="space-y-3 text-sm">
               <div v-for="item in summaryItems" :key="item.label" class="flex justify-between gap-4">
-                <span class="text-on-primary-container">{{ item.label }}</span>
+                <span class="text-white/70">{{ item.label }}</span>
                 <span class="font-semibold text-white text-right">{{ item.value }}</span>
               </div>
             </div>
@@ -51,7 +51,7 @@
 
           <div class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/15">
             <p class="text-sm font-bold text-on-surface mb-3 flex items-center gap-2">
-              <span class="material-symbols-outlined text-secondary text-[18px]">lightbulb</span>
+              <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
               为什么它适合 Results 页里的推荐用户
             </p>
             <p class="text-sm text-on-surface-variant leading-relaxed">
@@ -69,7 +69,7 @@
             <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">3 个月 × 12 周里程碑</h2>
             <p class="text-sm text-on-surface-variant">让用户知道 ¥4999 买到的是明确推进节奏，而不是模糊咨询时长。</p>
           </div>
-          <div class="hidden md:flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-secondary">
+          <div class="hidden md:flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-primary">
             <span>Week by Week</span>
           </div>
         </div>
@@ -79,10 +79,10 @@
             class="bg-surface-container-low rounded-2xl p-6">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-2">{{ stage.phase }}</p>
+                <p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">{{ stage.phase }}</p>
                 <h3 class="font-headline font-bold text-xl text-on-surface">{{ stage.title }}</h3>
               </div>
-              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-secondary">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-primary">
                 <span class="material-symbols-outlined text-[20px]">{{ stage.icon }}</span>
               </div>
             </div>
@@ -106,7 +106,7 @@
               <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">导师资质展示</h2>
               <p class="text-sm text-on-surface-variant">以下为示意导师画像，用于答辩展示匹配逻辑。</p>
             </div>
-            <span class="text-[10px] font-bold tracking-widest uppercase text-secondary">Mock</span>
+            <span class="text-[10px] font-bold tracking-widest uppercase text-primary">Mock</span>
           </div>
 
           <div class="space-y-4">
@@ -141,7 +141,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div v-for="match in tagMatches" :key="match.tag"
-              class="bg-surface-container-low rounded-2xl p-5 border-l-4 border-secondary/40">
+              class="bg-surface-container-low rounded-2xl p-5 border-l-4 border-primary/40">
               <div class="mb-3">
                 <TagChip :color="match.color">{{ match.tag }}</TagChip>
               </div>
@@ -150,8 +150,8 @@
             </div>
           </div>
 
-          <div class="bg-primary-container rounded-2xl p-6 text-white">
-            <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-2">Tag Driven Recommendation</p>
+          <div class="blue-banner rounded-2xl p-6 text-white">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-2">Tag Driven Recommendation</p>
             <p class="text-sm leading-relaxed text-white">
               启动包不是默认卖给所有人，而是专门承接“刚开始准备、科研积累薄弱、需要被拆任务推进”的用户段。
             </p>
@@ -166,12 +166,12 @@
             <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">学员 before / after</h2>
             <p class="text-sm text-on-surface-variant">以下案例与图表均为 mock，用于展示服务前后变化的表达方式。</p>
           </div>
-          <span class="text-[10px] font-bold tracking-widest uppercase text-secondary">Mock Case</span>
+          <span class="text-[10px] font-bold tracking-widest uppercase text-primary">Mock Case</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div class="lg:col-span-4 bg-surface-container-low rounded-2xl p-6">
-            <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-3">案例概况</p>
+            <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">案例概况</p>
             <h3 class="font-headline font-bold text-xl text-on-surface mb-2">李同学 · 经济学本科</h3>
             <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
               目标申请海外硕士，之前只有课程论文经历，没有形成稳定研究兴趣，也缺乏申请推进节奏。
@@ -199,7 +199,7 @@
                 </p>
               </div>
               <div class="bg-surface-container-low rounded-2xl p-6 flex flex-col items-center">
-                <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-4">After</p>
+                <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">After</p>
                 <RadarChart :scores="afterScores" :labels="radarLabels" :size="240" />
                 <p class="text-sm text-on-surface-variant mt-5 text-center leading-relaxed">
                   3 个月后：明确了研究题目方向，完成基础文献库搭建，并能按周推进阅读与表达任务。

@@ -104,7 +104,7 @@ export const dashboardReviewFeedback = [
     title: '下周建议',
     body: '优先完成 1 次针对目标方向的文献归纳，再带着问题去约下一次复盘，效率会明显更高。',
     icon: 'flag',
-    iconColor: 'text-secondary',
+    iconColor: 'text-primary',
   },
 ]
 

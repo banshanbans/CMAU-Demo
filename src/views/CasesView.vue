@@ -4,7 +4,7 @@
 
     <main class="pt-24 pb-20 px-6 max-w-6xl mx-auto">
       <section class="py-10 mb-8">
-        <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-4">Case Stories</p>
+        <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">Case Stories</p>
         <h1 class="font-headline font-bold text-4xl tracking-tight text-primary mb-4">
           标签不是结论，它最终要落到“用户选了什么服务，发生了什么变化”。
         </h1>
@@ -20,7 +20,7 @@
           style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
           <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-6">
             <div class="max-w-2xl">
-              <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-2">{{ study.persona }}</p>
+              <p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">{{ study.persona }}</p>
               <h2 class="font-headline font-bold text-3xl text-on-surface mb-3">{{ study.student }}</h2>
               <p class="text-sm text-on-surface-variant leading-relaxed">{{ study.background }}</p>
             </div>
@@ -60,23 +60,23 @@
                   <RadarChart :scores="study.beforeScores" :labels="radarLabels" :size="230" />
                 </div>
                 <div class="bg-surface-container-low rounded-2xl p-6 flex flex-col items-center">
-                  <p class="text-xs font-bold tracking-widest uppercase text-secondary mb-4">After</p>
+                  <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">After</p>
                   <RadarChart :scores="study.afterScores" :labels="radarLabels" :size="230" />
                 </div>
               </div>
             </div>
 
-            <div class="lg:col-span-4 bg-primary-container rounded-2xl p-6 text-white">
-              <p class="text-[10px] font-bold tracking-widest uppercase text-on-primary-container mb-3">Result Highlights</p>
+            <div class="lg:col-span-4 blue-banner rounded-2xl p-6 text-white">
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Result Highlights</p>
               <ul class="space-y-3 mb-6">
                 <li v-for="item in study.resultHighlights" :key="item" class="flex items-start gap-2.5 text-sm text-white">
-                  <span class="material-symbols-outlined text-secondary-container text-[18px] mt-0.5">check_circle</span>
+                  <span class="material-symbols-outlined text-white text-[18px] mt-0.5">check_circle</span>
                   <span>{{ item }}</span>
                 </li>
               </ul>
               <div class="flex flex-col gap-3">
                 <router-link to="/assessment"
-                  class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-4 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+                  class="inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
                   做同款测评
                   <span class="material-symbols-outlined text-[18px]">bolt</span>
                 </router-link>
