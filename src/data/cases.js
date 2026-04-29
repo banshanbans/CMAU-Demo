@@ -22,7 +22,7 @@ export const caseStudies = [
     background: '希望申请海外 PhD，有一定课程和课题经历，但研究表达仍较分散，不知道如何把材料说成一条线。',
     beforeTags: ['PhD 意向', '方向不清', '冲刺期'],
     service: '导师配对与科研陪跑',
-    afterSummary: '重新整理研究兴趣叙事，补强文献综述和方法表达，让申请材料更像研究者而不是“成绩单”。',
+    afterSummary: '重新整理研究兴趣叙事，补强文献综述和方法表达，让申请材料更能体现研究潜力。',
     beforeScores: [0.48, 0.42, 0.38, 0.44, 0.64],
     afterScores: [0.62, 0.75, 0.58, 0.66, 0.65],
     resultHighlights: [
@@ -35,7 +35,7 @@ export const caseStudies = [
     id: 'gap-anxiety',
     persona: 'Gap / 焦虑备战型',
     student: '李同学 · Gap 备考',
-    background: '离校后准备升学，但每天被信息和时间压力追着走，最担心的是“自己是不是已经晚了”。',
+    background: '离校后准备升学，但每天都被信息和时间压力推着走，最担心自己起步太晚。',
     beforeTags: ['高焦虑', '时间规划弱', '备战期'],
     service: '科研启动包 + 单次方向咨询',
     afterSummary: '把准备节奏拆成周任务后，焦虑明显下降，开始形成稳定复盘和执行感。',

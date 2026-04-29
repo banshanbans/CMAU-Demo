@@ -11,8 +11,8 @@
           先让你变得更强，<br class="hidden md:block" />再帮你走出去
         </h1>
         <p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-          见数不做"申请代理"，而是利用 3000+ 高校合作资源与数据化诊断能力，
-          打造以科研能力提升为核心、国际资源对接为出口的升学支持路径。
+          围绕科研准备度、方向规划、文献训练、导师沟通和申请节奏管理，
+          为海外硕士、博士和交流项目申请者提供系统支持。
         </p>
         <router-link to="/assessment"
           class="inline-flex items-center gap-2 mt-8 bg-primary text-white
@@ -26,8 +26,8 @@
       <!-- Service Architecture -->
       <section class="mb-16">
         <div class="text-center mb-10">
-          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">三层服务架构</h2>
-          <p class="text-on-surface-variant text-sm">每一层都对应 Credamo 现有的真实能力，没有依赖任何第三方</p>
+          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">服务路径</h2>
+          <p class="text-on-surface-variant text-sm">从准备度评估到科研训练，再到国际资源匹配，按申请阶段逐步推进。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -66,8 +66,8 @@
       <!-- Pricing Cards -->
       <section class="mb-16">
         <div class="text-center mb-10">
-          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">服务产品与定价</h2>
-          <p class="text-on-surface-variant text-sm">根据你的测评结果，系统会自动推荐最匹配的方案</p>
+          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">选择适合当前阶段的服务</h2>
+          <p class="text-on-surface-variant text-sm">你可以先完成测评，也可以直接了解各类服务的适用场景。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -133,8 +133,8 @@
       <section class="bg-surface-container-lowest rounded-2xl p-10 mb-16"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
         <div class="text-center mb-8">
-          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">为什么选择见数</h2>
-          <p class="text-on-surface-variant text-sm">每一条都是真实资产，不是营销话术</p>
+          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">服务支持基础</h2>
+          <p class="text-on-surface-variant text-sm">依托调研能力、高校资源和持续服务流程，帮助学生把准备过程落到具体任务。</p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div v-for="trust in trustPoints" :key="trust.title" class="text-center">
@@ -170,8 +170,8 @@ import AppNav from '../components/AppNav.vue'
 const layers = [
   {
     title: '诊断层',
-    desc: '科研准备度测评，基于 Credamo 调研平台原生构建。输出用户画像标签与分层建议，驱动后续服务推荐。',
-    source: 'Credamo 调研问卷平台 + 数据分析能力',
+    desc: '通过简短问卷评估科研积累、方向清晰度、时间规划和申请压力，生成个人准备度报告。',
+    source: '调研问卷设计与数据分析能力',
     icon: 'biotech',
     bgIcon: 'search',
     iconBg: 'bg-primary-soft/30',
@@ -180,7 +180,7 @@ const layers = [
   },
   {
     title: '提升层',
-    desc: '科研能力培养服务，通过高校合作资源变现。包括训练营、导师配对、课题参与和学术写作支持。',
+    desc: '围绕文献阅读、研究问题拆解、课题参与和学术表达，安排阶段性训练与反馈。',
     source: 'Credamo 3000+ 高校合作资源',
     icon: 'school',
     bgIcon: 'auto_stories',
@@ -190,7 +190,7 @@ const layers = [
   },
   {
     title: '对接层',
-    desc: '国际资源对接，利用 Credamo Inc. 美国分公司与海外院校合作网络，提供真实可查的海外背书。',
+    desc: '根据申请方向匹配导师沟通、海外项目、交流活动和申请材料准备资源。',
     source: 'Credamo Inc. + 国际院校合作网络',
     icon: 'public',
     bgIcon: 'flight',
@@ -204,18 +204,18 @@ const plans = [
   {
     name: '科研准备度测评',
     badge: '免费',
-    desc: '5 分钟获取你的科研准备度报告和用户标签，零门槛开始。',
+    desc: '5 分钟了解科研准备状态，获取优先提升建议。',
     price: '¥0',
     period: '/ 次',
     highlight: false,
     link: '/assessment',
-    features: ['五维度评分雷达图', '用户分层标签生成', '个性化行动建议 × 3', '推荐服务匹配'],
+    features: ['五维度准备度评分', '当前阶段识别', '个性化行动建议 × 3', '服务建议匹配'],
     cta: '立即开始',
   },
   {
     name: '科研启动包',
     badge: '推荐',
-    desc: '3 个月科研方向诊断与路径规划，适合科研背景较弱的备战期学生。',
+    desc: '3 个月建立研究方向、文献阅读节奏和基础学术表达。',
     price: '¥4,999',
     period: '/ 3个月',
     highlight: true,
@@ -226,7 +226,7 @@ const plans = [
   {
     name: '导师配对与科研陪跑',
     badge: '深度服务',
-    desc: '匹配对应方向导师或助研机会，6-9 个月系统科研产出支持。',
+    desc: '围绕目标方向匹配导师反馈、助研机会和阶段性成果支持。',
     price: '¥12,800',
     period: '/ 6个月起',
     highlight: false,
@@ -237,7 +237,7 @@ const plans = [
   {
     name: '全程陪跑套餐',
     badge: '旗舰',
-    desc: '诊断 + 提升 + 对接三层整合，12 个月完整升学支持闭环。',
+    desc: '覆盖准备度评估、科研训练、资源匹配和申请材料推进。',
     price: '¥16,800',
     period: '/ 12个月',
     highlight: false,

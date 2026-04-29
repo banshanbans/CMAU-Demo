@@ -65,7 +65,7 @@
               评估结论
             </h4>
             <p class="text-sm leading-relaxed text-on-surface italic">
-              "你处于备战期但科研积累不足，当前的高焦虑感主要来源于对申请节奏的掌控力较弱及核心产出缺失。建议优先锁定研究细分方向并启动基础文献研读。"
+              "你已经进入准备期，但科研积累和方向表达还不够稳定。建议先收窄研究方向，建立基础文献库，并用每周任务保持推进。"
             </p>
           </div>
         </section>
@@ -98,11 +98,11 @@
       <!-- Recommendations -->
       <section class="mb-10">
         <div class="flex items-center justify-between mb-7">
-          <h2 class="font-headline font-bold text-2xl tracking-tight">根据你的标签，我们推荐</h2>
+          <h2 class="font-headline font-bold text-2xl tracking-tight">适合你的下一步</h2>
           <div class="h-px flex-1 bg-surface-container-high mx-8 hidden md:block" />
           <router-link to="/services"
             class="text-primary font-bold text-sm hover:underline whitespace-nowrap">
-            查看全部方案
+            查看全部服务
           </router-link>
         </div>
 
@@ -110,7 +110,7 @@
           <!-- Card 1: Highlighted -->
           <div class="group bg-surface-container-lowest rounded-2xl p-8 relative overflow-hidden
                       border-2 border-primary-soft transition-all duration-300 hover:scale-[1.02]"
-               style="box-shadow: 0 4px 20px rgba(0,106,97,0.08)">
+               style="box-shadow: 0 4px 20px rgba(45,74,171,0.08)">
             <div class="absolute -right-6 -top-6 w-28 h-28 bg-primary-soft/20 rounded-full blur-2xl pointer-events-none" />
             <div class="flex justify-between items-start mb-5">
               <div>
@@ -179,10 +179,10 @@
             <span class="material-symbols-outlined text-on-surface-variant text-[18px]">psychology</span>
           </div>
           <div class="text-xs">
-            <p class="font-bold text-on-surface">觉得评估不准？</p>
+            <p class="font-bold text-on-surface">想更新结果？</p>
             <p class="text-on-surface-variant">
               <router-link to="/assessment" class="hover:text-primary">重新测评</router-link>
-              ，帮助我们优化算法
+              ，重新生成准备度建议
             </p>
           </div>
         </div>

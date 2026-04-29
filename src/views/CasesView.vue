@@ -6,11 +6,11 @@
       <section class="py-10 mb-8">
         <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">Case Stories</p>
         <h1 class="font-headline font-bold text-4xl tracking-tight text-primary mb-4">
-          标签不是结论，它最终要落到“用户选了什么服务，发生了什么变化”。
+          真实成长来自持续训练、反馈和阶段性产出。
         </h1>
         <p class="text-lg text-on-surface-variant max-w-3xl leading-relaxed">
-          以下案例均为 mock 场景，用于展示见数如何从用户标签出发，把服务推荐和成长结果连接起来。
-          重点不是夸张结果，而是能看见路径、节奏和前后变化。
+          这些学生在起点、目标和压力上各不相同，但都通过更清晰的任务节奏，
+          把科研准备推进到可沟通、可复盘、可沉淀的阶段成果。
         </p>
       </section>
 
@@ -35,7 +35,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div class="bg-surface-container-low rounded-2xl p-5">
-              <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3">初始标签</p>
+              <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3">起始状态</p>
               <div class="flex flex-wrap gap-2">
                 <TagChip v-for="tag in study.beforeTags" :key="study.id + tag" :color="tagColor(tag)">
                   {{ tag }}
@@ -43,11 +43,11 @@
               </div>
             </div>
             <div class="bg-surface-container-low rounded-2xl p-5">
-              <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3">选择的服务</p>
+              <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3">使用的服务</p>
               <p class="font-semibold text-on-surface">{{ study.service }}</p>
             </div>
             <div class="bg-surface-container-low rounded-2xl p-5">
-              <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3">结果变化</p>
+              <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3">阶段变化</p>
               <p class="text-sm text-on-surface-variant leading-relaxed">{{ study.afterSummary }}</p>
             </div>
           </div>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="lg:col-span-4 blue-banner rounded-2xl p-6 text-white">
-              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Result Highlights</p>
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">阶段成果</p>
               <ul class="space-y-3 mb-6">
                 <li v-for="item in study.resultHighlights" :key="item" class="flex items-start gap-2.5 text-sm text-white">
                   <span class="material-symbols-outlined text-white text-[18px] mt-0.5">check_circle</span>
@@ -77,7 +77,7 @@
               <div class="flex flex-col gap-3">
                 <router-link to="/assessment"
                   class="inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
-                  做同款测评
+                  开始测评
                   <span class="material-symbols-outlined text-[18px]">bolt</span>
                 </router-link>
                 <router-link to="/consult"
@@ -93,9 +93,9 @@
 
       <section class="bg-surface-container-lowest rounded-2xl p-8 text-center"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
-        <h2 class="font-headline font-bold text-2xl text-on-surface mb-3">先确定你的标签，再决定服务路径。</h2>
+        <h2 class="font-headline font-bold text-2xl text-on-surface mb-3">先了解自己的准备状态，再安排下一步。</h2>
         <p class="text-on-surface-variant mb-6">
-          案例页能告诉你“别人如何变化”，但真正的推荐仍然要从你的测评结果和当前状态出发。
+          完成测评后，你会看到更适合当前阶段的行动建议和服务选择。
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <router-link to="/assessment"

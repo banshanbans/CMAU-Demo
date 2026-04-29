@@ -12,7 +12,7 @@
           <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">Service Detail</p>
           <h1 class="font-headline font-bold text-4xl tracking-tight text-primary mb-4">科研启动包</h1>
           <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl mb-6">
-            面向科研起步、方向不清、焦虑感较强但已有明确升学意向的用户，
+            面向科研起步、方向不清、焦虑感较强但已有明确升学意向的学生，
             用 3 个月把“还没开始”推进到“知道该怎么做、每周在做什么”。
           </p>
           <div class="flex flex-wrap gap-2 mb-8">
@@ -52,11 +52,11 @@
           <div class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/15">
             <p class="text-sm font-bold text-on-surface mb-3 flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-[18px]">lightbulb</span>
-              为什么它适合 Results 页里的推荐用户
+              适合你的原因
             </p>
             <p class="text-sm text-on-surface-variant leading-relaxed">
-              当系统识别出“科研基础弱 + 节奏感弱 + 焦虑偏高”时，最需要的不是更多信息，
-              而是一套被拆成周任务的起步方案，这就是启动包的承接位置。
+              如果你科研基础较弱、方向还不够清晰，启动包会把接下来 12 周拆成可完成的阅读、
+              选题和表达任务。
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="flex items-center justify-between gap-6 mb-8">
           <div>
             <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">3 个月 × 12 周里程碑</h2>
-            <p class="text-sm text-on-surface-variant">让用户知道 ¥4999 买到的是明确推进节奏，而不是模糊咨询时长。</p>
+            <p class="text-sm text-on-surface-variant">每一周都有明确任务、反馈重点和阶段产出。</p>
           </div>
           <div class="hidden md:flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-primary">
             <span>Week by Week</span>
@@ -103,10 +103,10 @@
              style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
           <div class="flex items-center justify-between gap-4 mb-6">
             <div>
-              <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">导师资质展示</h2>
-              <p class="text-sm text-on-surface-variant">以下为示意导师画像，用于答辩展示匹配逻辑。</p>
+              <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">导师支持方向</h2>
+              <p class="text-sm text-on-surface-variant">根据你的学科兴趣和申请目标，匹配相近方向的导师反馈资源。</p>
             </div>
-            <span class="text-[10px] font-bold tracking-widest uppercase text-primary">Mock</span>
+            <span class="text-[10px] font-bold tracking-widest uppercase text-primary">导师资源</span>
           </div>
 
           <div class="space-y-4">
@@ -123,7 +123,7 @@
                       <p class="text-sm text-on-surface-variant">{{ mentor.title }}</p>
                     </div>
                     <span class="px-2 py-1 rounded-full bg-white text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">
-                      Logo Mock
+                      资源方向
                     </span>
                   </div>
                   <p class="text-sm text-on-surface mb-2">{{ mentor.focus }}</p>
@@ -137,7 +137,7 @@
         <div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-8"
              style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
           <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">适合你的情况</h2>
-          <p class="text-sm text-on-surface-variant mb-6">用标签解释服务，不让推荐停留在“像是适合你”。</p>
+          <p class="text-sm text-on-surface-variant mb-6">以下情况通常适合先从 3 个月基础训练开始。</p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div v-for="match in tagMatches" :key="match.tag"
@@ -151,9 +151,9 @@
           </div>
 
           <div class="blue-banner rounded-2xl p-6 text-white">
-            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-2">Tag Driven Recommendation</p>
+            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-2">Recommended Path</p>
             <p class="text-sm leading-relaxed text-white">
-              启动包不是默认卖给所有人，而是专门承接“刚开始准备、科研积累薄弱、需要被拆任务推进”的用户段。
+              科研启动包适合需要建立方向、补齐阅读基础并获得外部推进节奏的学生。
             </p>
           </div>
         </div>
@@ -163,10 +163,10 @@
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">学员 before / after</h2>
-            <p class="text-sm text-on-surface-variant">以下案例与图表均为 mock，用于展示服务前后变化的表达方式。</p>
+            <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">学员阶段变化</h2>
+            <p class="text-sm text-on-surface-variant">以下为典型学员路径，呈现 3 个月训练前后的准备度变化。</p>
           </div>
-          <span class="text-[10px] font-bold tracking-widest uppercase text-primary">Mock Case</span>
+          <span class="text-[10px] font-bold tracking-widest uppercase text-primary">案例路径</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -211,8 +211,8 @@
       </section>
 
       <section class="text-center">
-        <h2 class="font-headline font-bold text-2xl text-on-surface mb-3">先判断你需不需要这个包</h2>
-        <p class="text-on-surface-variant mb-7">先做免费测评，再让标签决定是否进入“科研启动包”的承接路径。</p>
+        <h2 class="font-headline font-bold text-2xl text-on-surface mb-3">先确认它是否适合你</h2>
+        <p class="text-on-surface-variant mb-7">完成测评后，你可以更清楚地判断是否需要启动 12 周训练。</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <router-link to="/assessment"
             class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-10 py-4 rounded-xl font-bold hover:opacity-90 transition-all shadow-xl shadow-black/10">
@@ -283,14 +283,14 @@ const mentors = [
     name: '导师画像 A',
     title: '社会科学研究方法方向',
     focus: '擅长把零散学术兴趣收束为可申请叙事，并建立文献阅读框架。',
-    note: '适合对问题意识和研究表达较弱、需要先完成“看懂文献”和“说清兴趣”的用户。',
+    note: '适合问题意识和研究表达较弱、需要先完成“看懂文献”和“说清兴趣”的学生。',
   },
   {
     badge: 'UCL',
     name: '导师画像 B',
     title: '教育 / 心理交叉研究方向',
     focus: '擅长引导初学者从课程论文过渡到更规范的研究表达和任务推进。',
-    note: '适合已准备升学但执行混乱、需要外部督导和节奏拆解的用户。',
+    note: '适合已准备升学但执行混乱、需要外部督导和节奏拆解的学生。',
   },
 ]
 
@@ -298,25 +298,25 @@ const tagMatches = [
   {
     tag: '科研空白',
     color: 'yellow',
-    title: '先解决“从零开始读什么”',
+    title: '明确第一批阅读材料',
     body: '用文献入口、阅读模板和研究问题拆解替代无序搜索，让起步变具体。',
   },
   {
     tag: '方向不清',
     color: 'blue',
-    title: '先把泛兴趣收束成细方向',
+    title: '把兴趣收束为可讨论的选题',
     body: '通过导师沟通和问题梳理，把“想读这个专业”转成“我想研究这个问题”。',
   },
   {
     tag: '高焦虑',
     color: 'red',
-    title: '先给节奏感，而不是继续灌信息',
-    body: '把服务拆成每周 milestone，降低失控感，让用户看见连续推进。',
+    title: '建立稳定推进节奏',
+    body: '把训练拆成每周任务，帮助你减少拖延和反复调整。',
   },
   {
     tag: '备战期',
     color: 'purple',
-    title: '先把申请前的关键基础补上',
+    title: '补齐申请前的科研基础',
     body: '用 3 个月完成基础研究训练，为后续更深的科研陪跑或申请准备打底。',
   },
 ]

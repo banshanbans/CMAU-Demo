@@ -10,8 +10,8 @@
             用数据化诊断，帮你把科研准备变成一条可执行的升学路径。
           </h1>
           <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl mb-8">
-            见数不是“申请代理”，而是先判断你当前的科研准备度，再给出提升方案与国际资源对接路径，
-            让测评、服务和持续陪跑连成一个完整产品闭环。
+            先用 5 分钟测评看清你的科研积累、方向清晰度和申请节奏，再匹配文献训练、
+            导师反馈、项目机会和国际交流资源。
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <router-link to="/assessment"
@@ -21,7 +21,7 @@
             </router-link>
             <router-link to="/services"
               class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-on-surface px-8 py-4 rounded-xl font-bold border border-outline-variant/20 hover:bg-white transition-all">
-              查看服务体系
+              查看服务
               <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
             </router-link>
           </div>
@@ -37,8 +37,8 @@
                   <span class="material-symbols-outlined filled text-[24px]">analytics</span>
                 </div>
                 <div>
-                  <p class="text-xs font-bold tracking-widest text-primary uppercase">3 秒理解产品</p>
-                  <p class="text-sm text-on-surface-variant">诊断当前状态，再匹配提升服务</p>
+                  <p class="text-xs font-bold tracking-widest text-primary uppercase">你的科研升学路径</p>
+                  <p class="text-sm text-on-surface-variant">先看清准备度，再安排下一步</p>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@
 
               <div class="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-soft text-primary text-xs font-bold">
                 <span class="w-2 h-2 rounded-full bg-primary"></span>
-                从陌生访客到测评用户的第一跳
+                完成测评后即可查看专属建议
               </div>
             </div>
           </div>
@@ -79,12 +79,12 @@
       <section class="mb-16">
         <div class="flex items-center justify-between mb-8 gap-6">
           <div>
-            <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">从诊断到服务的三层闭环</h2>
-            <p class="text-sm text-on-surface-variant">首页只做极简预览，完整方案在服务页展开。</p>
+            <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">科研升学支持路径</h2>
+            <p class="text-sm text-on-surface-variant">从测评到训练再到资源匹配，每一步都有明确任务。</p>
           </div>
           <router-link to="/services"
             class="text-primary font-bold text-sm whitespace-nowrap hover:underline">
-            查看完整服务体系
+            查看全部服务
           </router-link>
         </div>
 
@@ -103,7 +103,7 @@
             <h3 class="font-headline font-bold text-xl text-on-surface mb-3">{{ layer.title }}</h3>
             <p class="text-sm text-on-surface-variant leading-relaxed mb-5">{{ layer.desc }}</p>
             <div class="text-sm font-bold text-primary flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-              进入服务页
+              查看服务
               <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </div>
           </router-link>
@@ -113,8 +113,8 @@
       <section class="mb-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">找找你是哪一种用户</h2>
-            <p class="text-sm text-on-surface-variant">四类典型画像都能直通同一套测评，但看到的是不同问题感受。</p>
+            <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">看看哪种情况更像你</h2>
+            <p class="text-sm text-on-surface-variant">不同准备状态，对应的优先任务和服务建议也不同。</p>
           </div>
           <router-link to="/assessment"
             class="text-primary font-bold text-sm whitespace-nowrap hover:underline">
@@ -146,7 +146,7 @@
             <div class="flex items-center justify-between pt-5 border-t border-surface-container-high">
               <span class="text-sm font-semibold text-on-surface">{{ persona.goal }}</span>
               <span class="text-sm font-bold text-primary flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                找找你是哪种
+                开始测评
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
               </span>
             </div>
@@ -170,26 +170,26 @@ const heroPoints = [
   {
     icon: 'conversion_path',
     title: '再决定你需要什么服务',
-    body: '根据标签把用户从诊断页自然引导到最匹配的科研提升方案，而不是一上来卖套餐。',
+    body: '根据测评结果，推荐更适合当前阶段的训练和咨询服务。',
   },
   {
     icon: 'forum',
     title: '最后进入持续陪跑',
-    body: '把咨询、任务、复盘和资源对接放进一个连续流程，而不是一次性交易。',
+    body: '把咨询、任务、复盘和资源匹配放进同一个学习节奏里。',
   },
 ]
 
 const trustStats = [
   { label: '高校合作', value: '3000+', note: '高校合作资源网络，支撑科研提升和导师匹配场景。' },
-  { label: '企业客户', value: '4000+', note: '成熟数据服务基础，让“诊断层”具备可信度。' },
-  { label: '海外节点', value: 'Credamo Inc.', note: '美国分公司与国际合作网络，承接对接层叙事。' },
+  { label: '企业客户', value: '4000+', note: '成熟调研与数据服务经验，支撑准备度评估和需求洞察。' },
+  { label: '海外节点', value: 'Credamo Inc.', note: '海外业务节点与合作网络，支持国际学术资源连接。' },
 ]
 
 const layers = [
   {
     step: '第 1 层',
     title: '诊断',
-    desc: '先判断用户当前的科研准备状态，给出标签和优先行动建议。',
+    desc: '评估科研积累、方向清晰度、时间规划与申请压力，生成优先行动建议。',
     icon: 'biotech',
     bgIcon: 'search',
     iconBg: 'bg-primary-soft/30',
@@ -209,7 +209,7 @@ const layers = [
   {
     step: '第 3 层',
     title: '对接',
-    desc: '把已形成的科研积累接入国际院校与资源网络，承接升学出口。',
+    desc: '在能力准备更充分后，连接导师沟通、项目机会和国际交流资源。',
     icon: 'public',
     bgIcon: 'flight',
     iconBg: 'bg-primary-soft',

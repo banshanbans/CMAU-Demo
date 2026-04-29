@@ -5,7 +5,7 @@
         <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Resource Matching</p>
         <h1 class="font-headline font-bold text-3xl text-on-surface mb-2">资源对接</h1>
         <p class="text-on-surface-variant max-w-2xl">
-          当前已经从“诊断结果”进入“资源承接”阶段，系统会根据你的标签和节奏推荐可跟进资源。
+          根据你的研究兴趣、申请阶段和近期任务，为你整理导师画像、助研机会、公开活动和海外项目线索。
         </p>
       </div>
       <router-link to="/consult"
@@ -32,7 +32,7 @@
       <div class="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-8"
            style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
         <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">可对接资源</h2>
-        <p class="text-sm text-on-surface-variant mb-6">资源不是随机推送，而是从当前阶段、兴趣方向和焦虑状态反推出的匹配候选。</p>
+        <p class="text-sm text-on-surface-variant mb-6">优先查看与你当前方向和准备进度更接近的资源。</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div v-for="card in resourceCards" :key="card.title"
             class="bg-surface-container-low rounded-2xl p-5 border border-outline-variant/10">
@@ -60,7 +60,7 @@
         <section class="bg-surface-container-lowest rounded-2xl p-6"
                  style="box-shadow: 0 2px 12px rgba(15,23,42,0.04)">
           <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">匹配逻辑</h2>
-          <p class="text-sm text-on-surface-variant mb-5">标签不是为了展示，而是为了决定先推哪类资源。</p>
+          <p class="text-sm text-on-surface-variant mb-5">不同准备状态会对应不同资源优先级。</p>
           <div class="space-y-3">
             <div v-for="rule in matchingRules" :key="rule.from"
               class="bg-surface-container-low rounded-2xl p-4">

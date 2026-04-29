@@ -64,9 +64,9 @@
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div class="blue-banner rounded-2xl p-7 text-white">
             <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-2">Next Action</p>
-            <h3 class="font-headline font-bold text-2xl mb-3">看完之后，先判断你属于哪种状态。</h3>
+            <h3 class="font-headline font-bold text-2xl mb-3">把阅读结果转成下一步行动。</h3>
             <p class="text-sm text-white/80 leading-relaxed mb-5">
-              如果你还无法清楚判断自己是“科研空白”“冲刺期”还是“高焦虑”，先做测评比继续泛看内容更高效。
+              如果你还不确定当前最该补什么，完成测评可以帮你明确优先级和服务建议。
             </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <router-link to="/assessment"
@@ -99,8 +99,8 @@
 
       <section v-else class="bg-surface-container-lowest rounded-2xl p-10 text-center"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
-        <h1 class="font-headline font-bold text-3xl text-on-surface mb-3">内容建设中</h1>
-        <p class="text-on-surface-variant mb-6">这篇文章的详情还没有整理完成，你可以先返回内容中心查看其他文章。</p>
+        <h1 class="font-headline font-bold text-3xl text-on-surface mb-3">内容暂未开放</h1>
+        <p class="text-on-surface-variant mb-6">这篇内容还在整理中，你可以先浏览其他资料。</p>
         <router-link to="/content"
           class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition-all">
           返回内容中心

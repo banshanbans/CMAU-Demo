@@ -6,10 +6,10 @@
       <section class="py-10 mb-8">
         <p class="text-xs font-bold tracking-widest uppercase text-primary mb-4">Consult Booking</p>
         <h1 class="font-headline font-bold text-4xl tracking-tight text-primary mb-4">
-          预约 1v1 咨询，把测评和服务真正接到人工承接入口。
+          预约 1v1 咨询，明确你的科研升学下一步。
         </h1>
         <p class="text-lg text-on-surface-variant max-w-3xl leading-relaxed">
-          这里不发真实请求，只演示从测评、内容和服务页进入咨询预约的完整承接路径。
+          选择适合你的咨询类型和可沟通时间，顾问会根据你的背景、目标和当前困惑准备沟通建议。
           你可以先选择咨询类型，再提交时间和需求摘要。
         </p>
       </section>
@@ -95,7 +95,7 @@
                   </div>
                   <textarea v-model="form.summary" rows="5"
                     class="w-full rounded-2xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-on-surface outline-none focus:border-primary resize-none"
-                    placeholder="例如：科研经历较弱，不知道是否要先做方向诊断，想确认三个月应该优先补什么。"></textarea>
+                    placeholder="例如：科研经历较弱，想确认现在应该先补文献阅读、课题经历还是申请材料。"></textarea>
                 </label>
               </section>
             </div>
@@ -116,10 +116,10 @@
 
           <template v-else>
             <div class="blue-banner rounded-2xl p-8 text-white mb-6">
-              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Booking Confirmed</p>
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Booking Received</p>
               <h2 class="font-headline font-bold text-3xl mb-3">预约信息已提交</h2>
               <p class="text-sm text-white/80 leading-relaxed">
-                演示场景下不发真实请求。你填写的信息已进入确认态，可用于说明服务承接入口是完整可操作的。
+                我们已收到你的预约信息。顾问会结合你的需求摘要，与你确认沟通时间和准备材料。
               </p>
             </div>
 
@@ -179,17 +179,17 @@ const consultOptions = [
   {
     value: 'single',
     label: '单次方向咨询',
-    desc: '适合先做 60 分钟诊断，快速判断是否需要更深服务。',
+    desc: '适合先用 60 分钟梳理方向、短板和近期任务。',
   },
   {
     value: 'startup',
     label: '科研启动包咨询',
-    desc: '适合已被“科研启动包”吸引，想确认是否适合自己的人。',
+    desc: '适合准备启动 3 个月训练，想确认服务内容和节奏的学生。',
   },
   {
     value: 'full',
     label: '全程陪跑咨询',
-    desc: '适合准备周期更长、需要整合规划与资源对接的人。',
+    desc: '适合申请周期较长，需要科研训练、资源匹配和材料推进同步管理的学生。',
   },
 ]
 
@@ -203,9 +203,9 @@ const timeSlots = [
 ]
 
 const steps = [
-  { id: '01', title: '选择咨询类型', body: '先确认你需要的是单次诊断，还是面向启动包/全程服务的咨询。' },
-  { id: '02', title: '选择时间段', body: '用几个固定时段模拟顾问日历，不引入真实排期系统。' },
-  { id: '03', title: '提交需求摘要', body: '填写身份、目标和当前困惑，形成咨询前的基本上下文。' },
+  { id: '01', title: '选择咨询类型', body: '选择你最想解决的问题类型，方便顾问提前准备。' },
+  { id: '02', title: '选择时间段', body: '选择你方便沟通的时间段，后续会进一步确认。' },
+  { id: '03', title: '提交需求摘要', body: '填写身份、目标和当前困惑，让咨询更聚焦。' },
 ]
 
 const initialForm = () => ({

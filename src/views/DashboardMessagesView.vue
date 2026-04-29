@@ -5,7 +5,7 @@
         <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Inbox</p>
         <h1 class="font-headline font-bold text-3xl text-on-surface mb-2">消息</h1>
         <p class="text-on-surface-variant max-w-2xl">
-          这里集中展示导师反馈、系统提醒和活动通知，重点不是看过多少条消息，而是每条消息都能推动下一步动作。
+          集中查看导师反馈、任务提醒和活动通知，及时处理会影响本周进度的关键信息。
         </p>
       </div>
       <button @click="markAllRead"

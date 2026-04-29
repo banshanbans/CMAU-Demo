@@ -93,7 +93,7 @@
       <div class="flex items-center justify-between mb-6">
         <div>
           <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">本周任务板</h2>
-          <p class="text-sm text-on-surface-variant">任务按阅读、导师沟通和输出分类，而不是混成一个待办列表。</p>
+          <p class="text-sm text-on-surface-variant">阅读、导师沟通和输出任务分开管理，方便你判断本周重点。</p>
         </div>
         <span class="text-sm font-bold text-primary">{{ tasks.filter((item) => item.done).length }}/{{ tasks.length }} 已完成</span>
       </div>

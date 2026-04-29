@@ -115,9 +115,9 @@
           <p class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">本周复盘反馈</p>
           <span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
         </div>
-        <p class="text-sm text-on-surface mb-2">系统已根据本周任务完成情况生成 3 条反馈。</p>
+        <p class="text-sm text-on-surface mb-2">本周复盘已整理出 3 条重点反馈。</p>
         <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
-          核心问题不在于任务数量，而在于文献阅读和导师沟通之间还缺少稳定的连接动作。
+          下周建议把文献阅读结果整理成问题清单，再带着问题进入导师沟通。
         </p>
         <button @click="showReviewModal = true"
           class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">
@@ -129,10 +129,10 @@
       <section class="col-span-12 xl:col-span-3 relative overflow-hidden blue-banner rounded-2xl p-6 text-white"
                style="box-shadow: 0 2px 12px rgba(15,23,42,0.08)">
         <div class="relative z-10">
-          <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">Featured Event</p>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mb-3">本周活动</p>
           <h3 class="font-headline font-bold text-xl text-white mb-3">探索科研前沿</h3>
           <p class="text-sm text-white/80 leading-relaxed mb-5">
-            加入本周六的线上研讨会，与 Top 30 院校校友交流最新科研趋势。
+              参加本周六线上研讨会，了解跨学科研究如何转化为申请中的项目叙事。
           </p>
           <div class="flex flex-col gap-3">
             <button class="inline-flex items-center justify-center gap-2 bg-white text-on-surface px-4 py-3 rounded-xl text-sm font-bold hover:bg-surface-container-low transition-colors">
@@ -159,13 +159,13 @@
           <div class="max-w-xl">
             <span class="inline-flex items-center px-3 py-1 rounded-full bg-black/30
                          text-primary text-[10px] font-bold uppercase tracking-widest mb-5">
-              Monthly Insight
+              本月观察
             </span>
             <h3 class="text-2xl md:text-3xl font-headline font-bold mb-4 leading-tight text-on-surface">
-              跨学科研究正成为顶级学府录取的"金钥匙"。
+              跨学科研究经历正在成为申请材料里的重要亮点。
             </h3>
             <p class="text-sm leading-relaxed opacity-70 mb-5">
-              根据 2024 年秋季录取趋势，超过 40% 的获录学生在其简历中展示了至少一个跨领域研究项目。
+              如果你计划申请教育、数据、社会科学或管理相关方向，可以尽早沉淀一个可说明问题意识和方法能力的项目。
             </p>
             <router-link to="/content"
               class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline">
@@ -192,10 +192,10 @@
         </button>
 
         <div class="pr-10 mb-6">
-          <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Weekly Review Insight</p>
+          <p class="text-xs font-bold tracking-widest uppercase text-primary mb-3">Weekly Review</p>
           <h3 class="font-headline font-bold text-3xl text-on-surface mb-3">本周复盘反馈</h3>
           <p class="text-sm text-on-surface-variant leading-relaxed">
-            系统根据你本周的任务完成情况、当前服务阶段和最近一次导师反馈，生成了这份复盘建议。
+            这份复盘结合了本周任务完成情况、当前服务阶段和最近一次导师反馈，帮助你确定下周优先事项。
           </p>
         </div>
 
