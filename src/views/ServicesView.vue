@@ -129,6 +129,41 @@
         </div>
       </section>
 
+      <!-- Tag Matching -->
+      <section class="mb-16">
+        <div class="text-center mb-10">
+          <h2 class="font-headline font-bold text-2xl text-on-surface mb-2">标签匹配服务路径</h2>
+          <p class="text-on-surface-variant text-sm">测评标签会决定当前最适合先进入哪一类服务。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div v-for="rule in serviceMatchRules" :key="rule.service"
+            class="rounded-2xl p-6 border transition-all duration-300"
+            :class="rule.active
+              ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20'
+              : 'bg-surface-container-lowest border-outline-variant/20'"
+            style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
+            <div class="flex flex-wrap gap-2 mb-5">
+              <TagChip v-for="tag in rule.tags" :key="rule.service + tag.label" :color="rule.active ? 'gray' : tag.color">
+                {{ tag.label }}
+              </TagChip>
+            </div>
+            <p class="text-[10px] font-bold tracking-widest uppercase mb-2"
+              :class="rule.active ? 'text-white/70' : 'text-primary'">
+              {{ rule.active ? '当前推荐' : '匹配规则' }}
+            </p>
+            <h3 class="font-headline font-bold text-xl mb-3"
+              :class="rule.active ? 'text-white' : 'text-on-surface'">
+              {{ rule.service }}
+            </h3>
+            <p class="text-sm leading-relaxed"
+              :class="rule.active ? 'text-white/80' : 'text-on-surface-variant'">
+              {{ rule.desc }}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Trust -->
       <section class="bg-surface-container-lowest rounded-2xl p-10 mb-16"
                style="box-shadow: 0 4px 16px rgba(15,23,42,0.04)">
@@ -166,6 +201,11 @@
 
 <script setup>
 import AppNav from '../components/AppNav.vue'
+import TagChip from '../components/TagChip.vue'
+import { buildAssessmentResult } from '../composables/useAssessmentResult.js'
+
+const assessmentResult = buildAssessmentResult()
+const currentTags = assessmentResult.tagLabels
 
 const layers = [
   {
@@ -244,6 +284,36 @@ const plans = [
     link: '/consult',
     features: ['三层服务全覆盖', '海外院校匹配报告', '申请材料全程指导', '每月进度复盘 × 12'],
     cta: '预约咨询',
+  },
+]
+
+const serviceMatchRules = [
+  {
+    tags: [
+      { label: '科研空白', color: 'yellow' },
+      { label: '高焦虑', color: 'red' },
+    ],
+    service: '科研启动包',
+    desc: '先用文献入口、方向诊断和周任务把“无从下手”转成可执行节奏。',
+    active: currentTags.includes('科研空白') && currentTags.includes('高焦虑'),
+  },
+  {
+    tags: [
+      { label: 'PhD 意向', color: 'teal' },
+      { label: '有积累', color: 'green' },
+    ],
+    service: '导师配对与科研陪跑',
+    desc: '把已有科研积累转化为导师沟通材料、研究计划和更清晰的申请叙事。',
+    active: currentTags.includes('PhD 意向') && currentTags.includes('有积累'),
+  },
+  {
+    tags: [
+      { label: '冲刺期', color: 'purple' },
+      { label: '需要整合', color: 'gray' },
+    ],
+    service: '全程陪跑套餐',
+    desc: '统一管理科研表达、资源对接、申请材料和关键节点，降低冲刺期遗漏风险。',
+    active: currentTags.includes('冲刺期'),
   },
 ]
 

@@ -3,8 +3,13 @@
     <div class="relative flex items-center h-16 px-6 max-w-screen-2xl mx-auto">
       <!-- Brand -->
       <router-link to="/home"
-        class="text-xl font-bold tracking-tighter text-primary font-headline select-none">
-        见数Credamo
+        class="inline-flex items-center select-none shrink-0"
+        aria-label="Credamo 见数首页">
+        <img
+          src="../assets/credamo-logo.png"
+          alt="Credamo 见数"
+          class="h-10 md:h-11 w-auto max-w-[190px] object-contain"
+        />
       </router-link>
 
       <!-- Nav Links -->

@@ -47,13 +47,11 @@
           <!-- Status card -->
           <div class="blue-banner text-white p-7 rounded-2xl flex-1 flex flex-col justify-center">
             <p class="text-[10px] font-label tracking-widest uppercase mb-2 opacity-60">CURRENT STATUS</p>
-            <p class="text-3xl font-headline font-bold mb-5">备战冲刺期</p>
+            <p class="text-3xl font-headline font-bold mb-5">{{ result.statusTitle }}</p>
             <div class="flex flex-wrap gap-2">
-              <TagChip color="yellow">科研初级</TagChip>
-              <TagChip color="blue">方向初步</TagChip>
-              <TagChip color="purple">备战期</TagChip>
-              <TagChip color="red">高焦虑</TagChip>
-              <TagChip color="gray">信息中等</TagChip>
+              <TagChip v-for="tag in result.tags" :key="tag.label" :color="tag.color">
+                {{ tag.label }}
+              </TagChip>
             </div>
           </div>
 
@@ -65,7 +63,7 @@
               评估结论
             </h4>
             <p class="text-sm leading-relaxed text-on-surface italic">
-              "你已经进入准备期，但科研积累和方向表达还不够稳定。建议先收窄研究方向，建立基础文献库，并用每周任务保持推进。"
+              "{{ result.conclusion }}"
             </p>
           </div>
         </section>
@@ -115,25 +113,25 @@
             <div class="flex justify-between items-start mb-5">
               <div>
                 <span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 inline-block uppercase tracking-wider">
-                  推荐
+                  {{ primaryPlan.badge }}
                 </span>
-                <h3 class="font-headline font-bold text-xl text-primary">科研启动包</h3>
+                <h3 class="font-headline font-bold text-xl text-primary">{{ primaryPlan.name }}</h3>
               </div>
               <div class="text-right">
-                <span class="block text-2xl font-bold text-primary">¥4,999</span>
-                <span class="text-xs text-on-surface-variant">3个月进阶计划</span>
+                <span class="block text-2xl font-bold text-primary">{{ primaryPlan.price }}</span>
+                <span class="text-xs text-on-surface-variant">{{ primaryPlan.period }}</span>
               </div>
             </div>
             <ul class="space-y-3 mb-7">
-              <li v-for="feat in pkg1features" :key="feat" class="flex items-start gap-2.5">
+              <li v-for="feat in primaryPlan.features" :key="feat" class="flex items-start gap-2.5">
                 <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
                 <span class="text-sm text-on-surface-variant">{{ feat }}</span>
               </li>
             </ul>
-            <router-link to="/services/startup-pack"
+            <router-link :to="primaryPlan.link"
               class="flex items-center justify-center w-full bg-primary text-on-primary
                      py-3.5 rounded-xl font-bold text-sm hover:opacity-90 transition-all gap-2">
-              了解详情
+              {{ primaryPlan.cta }}
               <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
             </router-link>
           </div>
@@ -200,23 +198,13 @@
 import AppNav    from '../components/AppNav.vue'
 import RadarChart from '../components/RadarChart.vue'
 import TagChip   from '../components/TagChip.vue'
+import { buildAssessmentResult } from '../composables/useAssessmentResult.js'
 
-const radarLabels = ['科研积累', '方向清晰度', '时间规划', '核心竞争力', '英语能力']
-const radarScores = [0.35, 0.55, 0.50, 0.40, 0.65]
-
-const dimensionDetails = [
-  { label: '科研积累',   score: 0.35, note: '目前有课程论文经历，尚缺乏独立课题参与或学术成果' },
-  { label: '方向清晰度', score: 0.55, note: '目标方向初步确定，但细分领域和目标院校范围仍较模糊' },
-  { label: '时间规划',   score: 0.50, note: '有基本时间意识，但关键节点和里程碑尚未明确落地' },
-  { label: '核心竞争力', score: 0.40, note: '综合背景中等，与顶项目竞争仍有明显差距需弥补' },
-  { label: '英语能力',   score: 0.65, note: '语言基础较好，建议在申请季前完成标化考试' },
-]
-
-const pkg1features = [
-  '定制化科研文献库建设（1v1）',
-  '每周学术进度督导及复盘报告',
-  '核心期刊论文写作基础课程',
-]
+const result = buildAssessmentResult()
+const radarLabels = result.radarLabels
+const radarScores = result.radarScores
+const dimensionDetails = result.dimensionDetails
+const primaryPlan = result.recommendedPlan
 
 const pkg2features = [
   '海外博士导师 1v1 深度沟通',

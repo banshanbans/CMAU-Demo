@@ -39,12 +39,31 @@
             </div>
 
             <div class="flex items-center lg:items-end justify-between gap-4 shrink-0">
+              <div class="flex items-center gap-2">
+                <button @click="prevBanner"
+                  class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-primary-soft/50 transition-colors"
+                  aria-label="上一项活动">
+                  <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                </button>
+                <button @click="nextBanner"
+                  class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-primary-soft/50 transition-colors"
+                  aria-label="下一项活动">
+                  <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </button>
+              </div>
               <router-link :to="`/content/${activeBanner.slug}`"
                 class="primary-button px-5 py-2.5 text-sm whitespace-nowrap">
                 查看专题
                 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
               </router-link>
             </div>
+          </div>
+          <div class="flex items-center gap-2 mt-5 pl-16">
+            <button v-for="(_, index) in competitionBanners" :key="'banner-dot-' + index"
+              @click="setBanner(index)"
+              class="h-2 rounded-full transition-all"
+              :class="index === activeBannerIndex ? 'w-8 bg-primary' : 'w-2 bg-surface-container-high hover:bg-primary/40'"
+              :aria-label="`切换到第 ${index + 1} 个活动`" />
           </div>
         </div>
       </section>
@@ -152,19 +171,41 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import AppNav from '../components/AppNav.vue'
 import TagChip from '../components/TagChip.vue'
 import { competitionBanners, contentArticles, contentTags } from '../data/content.js'
 
 const activeTag = ref('全部内容')
+const activeBannerIndex = ref(0)
+let bannerTimer = null
 
 const filteredArticles = computed(() => {
   if (activeTag.value === '全部内容') return contentArticles
   return contentArticles.filter((article) => article.tags.includes(activeTag.value))
 })
 
-const activeBanner = computed(() => competitionBanners[0])
+const activeBanner = computed(() => competitionBanners[activeBannerIndex.value])
+
+function setBanner(index) {
+  activeBannerIndex.value = index
+}
+
+function nextBanner() {
+  activeBannerIndex.value = (activeBannerIndex.value + 1) % competitionBanners.length
+}
+
+function prevBanner() {
+  activeBannerIndex.value = (activeBannerIndex.value - 1 + competitionBanners.length) % competitionBanners.length
+}
+
+onMounted(() => {
+  bannerTimer = window.setInterval(nextBanner, 4500)
+})
+
+onBeforeUnmount(() => {
+  if (bannerTimer) window.clearInterval(bannerTimer)
+})
 
 function tagColor(tag) {
   const colorMap = {

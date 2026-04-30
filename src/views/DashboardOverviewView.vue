@@ -13,17 +13,17 @@
             <svg class="w-full h-full -rotate-90">
               <circle cx="40" cy="40" r="34" fill="transparent" stroke="#eceef0" stroke-width="8" />
               <circle cx="40" cy="40" r="34" fill="transparent" stroke="#2D4AAB" stroke-width="8"
-                stroke-dasharray="213.6" stroke-dashoffset="123.9" stroke-linecap="round" />
+                stroke-dasharray="213.6" :stroke-dashoffset="readinessOffset" stroke-linecap="round" />
             </svg>
             <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-lg font-headline font-bold text-on-surface">42%</span>
+              <span class="text-lg font-headline font-bold text-on-surface">{{ assessmentResult.readinessPercent }}%</span>
             </div>
           </div>
           <div>
-            <p class="text-sm text-on-surface-variant mb-1">超越了 68% 的同届学生</p>
+            <p class="text-sm text-on-surface-variant mb-1">超越了 {{ assessmentResult.peerPercent }}% 的同届学生</p>
             <div class="flex items-center text-emerald-600 text-xs font-bold gap-0.5">
               <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
-              +12% 本月
+              +{{ monthlyGrowth }}% 本月
             </div>
           </div>
         </div>
@@ -36,10 +36,10 @@
           <p class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">当前服务</p>
           <span class="material-symbols-outlined text-primary text-[20px]">package_2</span>
         </div>
-        <h3 class="text-xl font-headline font-bold text-on-surface mb-2">科研启动包</h3>
+        <h3 class="text-xl font-headline font-bold text-on-surface mb-2">{{ assessmentResult.recommendedPlan.name }}</h3>
         <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-          第 2 月 / 共 3 月
+          {{ assessmentResult.serviceStage }}
         </div>
       </div>
 
@@ -245,13 +245,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import {
   dashboardRecommendedActions,
   dashboardReviewFeedback,
   dashboardTasks,
 } from '../data/dashboard.js'
+import { buildAssessmentResult } from '../composables/useAssessmentResult.js'
 
+const assessmentResult = buildAssessmentResult()
+const readinessOffset = computed(() => 213.6 * (1 - assessmentResult.readinessPercent / 100))
+const monthlyGrowth = computed(() => Math.max(6, Math.round(assessmentResult.readinessPercent * 0.24)))
 const tasks = ref(dashboardTasks.map((task) => ({ ...task })))
 const showReviewModal = ref(true)
 </script>

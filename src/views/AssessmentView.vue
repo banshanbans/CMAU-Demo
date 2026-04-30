@@ -108,6 +108,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import AppNav from '../components/AppNav.vue'
+import { saveAssessmentAnswers } from '../composables/useAssessmentResult.js'
 
 const router = useRouter()
 const current = ref(0)
@@ -235,6 +236,7 @@ function next() {
   if (current.value < steps.length - 1) {
     current.value++
   } else {
+    saveAssessmentAnswers(answers.value)
     router.push('/results')
   }
 }
