@@ -13,9 +13,9 @@
       </router-link>
 
       <!-- Nav Links -->
-      <nav class="hidden md:flex items-center gap-3 absolute left-1/2 -translate-x-1/2">
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-3 absolute left-1/2 -translate-x-1/2">
         <router-link v-for="item in navItems" :key="item.to" :to="item.to"
-          class="inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 text-sm font-semibold transition-all duration-200 px-3 py-2 rounded-lg"
+          class="inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 text-sm font-semibold transition-all duration-200 px-2 xl:px-3 py-2 rounded-lg"
           :class="isActive(item.to)
             ? 'text-primary bg-primary-soft'
             : 'text-on-surface-variant hover:text-primary hover:bg-primary-soft/70'">
@@ -42,6 +42,8 @@ const navItems = [
   { to: '/results',    label: '报告',   icon: 'analytics' },
   { to: '/services',   label: '服务',   icon: 'school' },
   { to: '/content',    label: '内容',   icon: 'article' },
+  { to: '/community',  label: '社群',   icon: 'groups' },
+  { to: '/school-selection', label: '选校', icon: 'travel_explore' },
   { to: '/cases',      label: '案例',   icon: 'workspaces' },
   { to: '/dashboard',  label: '控制台', icon: 'dashboard' },
 ]

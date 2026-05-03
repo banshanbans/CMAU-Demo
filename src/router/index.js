@@ -11,6 +11,8 @@ import ServicesView   from '../views/ServicesView.vue'
 import StartupPackView from '../views/StartupPackView.vue'
 import ContentView from '../views/ContentView.vue'
 import ContentArticleView from '../views/ContentArticleView.vue'
+import CommunityView from '../views/CommunityView.vue'
+import SchoolSelectionView from '../views/SchoolSelectionView.vue'
 import CasesView from '../views/CasesView.vue'
 import ConsultView from '../views/ConsultView.vue'
 
@@ -33,6 +35,8 @@ const routes = [
   { path: '/services/startup-pack', component: StartupPackView },
   { path: '/content', component: ContentView },
   { path: '/content/:slug', component: ContentArticleView },
+  { path: '/community', component: CommunityView },
+  { path: '/school-selection', component: SchoolSelectionView },
   { path: '/cases', component: CasesView },
   { path: '/consult', component: ConsultView },
 ]
